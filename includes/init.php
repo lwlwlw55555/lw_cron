@@ -16,7 +16,7 @@ global $db, $db_user, $sync_db, $route_drds_db, $stat_drds_db;
 global $opt_params;
 
 $opt_params = getopt('', ['rds:', 'db:', 'route_rds:', 'route_db:', 'facility_id:', 'shop_id:', 'mod:', 'mod_index:', 'order_sn:', 'start:', 'end:', 'limit:']);
-echo date("Y-m-d H:i:s") . " getopt:" . json_encode($opt_params) . PHP_EOL;
+// echo date("Y-m-d H:i:s") . " getopt:" . json_encode($opt_params) . PHP_EOL;
 
 if(isset($db_conf)){
     $db = ClsPdo::getInstance($db_conf);
