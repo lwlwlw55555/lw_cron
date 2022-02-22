@@ -99,7 +99,7 @@ function send_xxl_email($report_data, $is_content = 1, $send_email_ary = []){
 }
 
 function getXxlContent($data_arr){
-    $content = '';
+    $content = "";
     foreach ($data_arr as $key => $value) {
         $content .= " <div><b>----{$key}----</b><table border=1 cellspacing=0 ><tr>";
         $key_array = array_keys($value[0]);
