@@ -24,7 +24,7 @@ if (!empty($token_mapping)) {
         $token_leqee = $token_mapping['leqee'];
     }
     if (!empty($token_mapping['gyc'])) {
-        $token_gyc = $token_mapping['gyc']
+        $token_gyc = $token_mapping['gyc'];
     }
 }
 
