@@ -66,8 +66,8 @@ foreach ($dbs as $key => $value) {
     }
 }
 
-$res = getXxlAttachment($result);
-echo $res;
+$res = getXxlAttachmentOut($result);
+// echo $res;
 
 // $res = getXxlContent($result);
 // echo $res;

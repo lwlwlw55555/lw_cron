@@ -43,6 +43,30 @@ function getXxlAttachment($data){
     return $file_name;
 }
 
+function getXxlAttachmentOut($data){
+    $objPHPExcel = new PHPExcel();
+    $i=0;
+    foreach ($data as $key => $value) {
+        if ($i>0) {
+           //产生这个错误的原因是PHPExcel会自动创建第一个sheet，因此我们可以直接创建一个PHPEXCEL对象并且操作第一个sheet：$i>0需要手动创建！
+           $objPHPExcel->createSheet();
+        }
+        $objPHPExcel->setactivesheetindex($i);
+        $objSheet = $objPHPExcel->getActiveSheet();  
+        $objSheet->setTitle($key);     //对当前sheet对象命名
+        $keys = getKeyCol($value[0]);
+        $printData = array_merge([$keys],$value);
+        $objSheet->fromArray($printData);
+        $i++;
+    }
+    $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel2007');   //设定写入excel的类型
+    global $excel_dir;
+    $file_name = $excel_dir."xxl-cron_".date('Y-m-d H:i:s').".xlsx";
+    $objWriter->save('php://output');
+    //写excel
+    return $file_name;
+}
+
 function getKeyCol($arr){
     $res = [];
     if (is_array($arr) && !empty($arr)) {
