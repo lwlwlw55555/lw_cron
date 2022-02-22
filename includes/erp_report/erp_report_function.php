@@ -70,7 +70,8 @@ function getXxlAttachmentOut($data){
     // header("Content-Type: application/force-download");
     // header("Content-Type: application/octet-stream");
     // header("Content-Type: application/download");
-    header('Content-Type: application/vnd.ms-excel');
+    // https://blog.csdn.net/weixin_35920379/article/details/115204504
+    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     header('Content-Disposition: attachment;filename="lw.xlsx"');
     header('Cache-Control: max-age=0');
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel2007');
