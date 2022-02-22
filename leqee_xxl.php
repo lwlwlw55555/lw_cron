@@ -67,7 +67,8 @@ foreach ($dbs as $key => $value) {
 }
 
 $res = getXxlContent($result);
-var_export($res);
+echo $res;
+// var_export($res);
 
 
 // var_export($result);
