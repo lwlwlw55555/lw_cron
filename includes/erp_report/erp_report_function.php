@@ -63,7 +63,7 @@ function getXxlAttachmentOut($data){
     // global $excel_dir;
     // $file_name = $excel_dir."xxl-cron_".date('Y-m-d H:i:s').".xlsx";
     $file_name = "xxl-cron_".date('Y-m-d H:i:s');
-    header('pragma:public');
+    // header('pragma:public');
     // header('Content-type:application/vnd.ms-excel;charset=utf-8;name="'.iconv('utf-8', 'gbk', $file_name).'.xlsx"');
     // header("Content-Disposition:attachment;filename={$file_name}.xlsx");
     // header('Cache-Control: max-age=0');
