@@ -108,7 +108,7 @@ function getXxlContent($data_arr){
         }
         $content .= "</tr>";
         foreach ($value as $data) {
-            $content .= !empty($data[$key_array[count($key_array)-1]])?"<tr>":"<tr style='color:red;'>";
+            $content .= !empty($data[$key_array[count($key_array)-1]]) && !empty($data[$key_array[count($key_array)-2]])?"<tr>":"<tr style='color:red;'>";
             foreach ($key_array as $key){
                 $content .= "<td>{$data[$key]}</td>";
             }
@@ -116,7 +116,6 @@ function getXxlContent($data_arr){
         }
         $content .= "</table></div><br>";
     }
-    echo $content."\r\n";
     return $content;
 }
 

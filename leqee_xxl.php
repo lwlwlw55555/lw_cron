@@ -15,6 +15,19 @@ if (!empty($argv[2])) {
     $token_gyc =  $argv[2];   
 }
 
+global $db;
+
+$token_mapping = $db->getRow("select * from common_config where config_key = 'TOKEN_MAPPING'");
+if (!empty($token_mapping)) {
+    $token_mapping = json_decode($token_mapping);
+    if (!empty($token_mapping['leqee'])) {
+        $token_leqee = $token_mapping['leqee'];
+    }
+    if (!empty($token_mapping['gyc'])) {
+        $token_gyc = $token_mapping['gyc']
+    }
+}
+
 $url_leqee = 'https://databasehub.leqee.com/api/QuickQueryController';
 $url_gyc = 'https://databasehub.guanyc.cn/api/QuickQueryController';
 
