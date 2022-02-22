@@ -17,14 +17,14 @@ if (!empty($argv[2])) {
 
 global $db;
 
-$token_mapping = $db->getOne("select * from common_config where config_key = 'TOKEN_MAPPING'");
+$token_mapping = $db->getOne("select config_value from common_config where config_key = 'TOKEN_MAPPING'");
 if (!empty($token_mapping)) {
-    $token_mapping = json_decode($token_mapping);
-    if (!empty($token_mapping['leqee'])) {
-        $token_leqee = $token_mapping['leqee'];
+    $tokens = json_decode($token_mapping);
+    if (!empty($tokens['leqee'])) {
+        $token_leqee = $tokens['leqee'];
     }
-    if (!empty($token_mapping['gyc'])) {
-        $token_gyc = $token_mapping['gyc'];
+    if (!empty($tokens['gyc'])) {
+        $token_gyc = $tokens['gyc'];
     }
 }
 
