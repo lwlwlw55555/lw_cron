@@ -19,7 +19,7 @@ global $db;
 
 $token_mapping = $db->getOne("select config_value from common_config where config_key = 'TOKEN_MAPPING'");
 if (!empty($token_mapping)) {
-    $tokens = json_decode($token_mapping);
+    $tokens = json_decode($token_mapping,true);
     if (!empty($tokens['leqee'])) {
         $token_leqee = $tokens['leqee'];
     }
