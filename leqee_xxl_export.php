@@ -4,6 +4,12 @@ require(ROOT_PATH . "includes/erp_report/erp_report_function.php");
 // https://databasehub.leqee.com/api/QuickQueryController/permittedDatabases
 // https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute
 
+ini_set("display_errors", 0);
+
+error_reporting(E_ALL ^ E_NOTICE);
+
+error_reporting(E_ALL ^ E_WARNING);
+
 $token_leqee = "6502b6ab3ff6297121d02efbcf0c851062143be28e17d";
 $token_gyc = "38c846cc6369ab8cb33baebed2f6c3a862143da9e6bf2";
 
