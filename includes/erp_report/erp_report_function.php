@@ -37,7 +37,7 @@ function getXxlAttachment($data){
     }
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel2007');   //设定写入excel的类型
     global $excel_dir;
-    $file_name = "xxl-cron_".date('Y-m-d H:i:s').".xlsx";
+    $file_name = $excel_dir."xxl-cron_".date('Y-m-d H:i:s').".xlsx";
     $objWriter->save($file_name);
     //写excel
     return $file_name;
