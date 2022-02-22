@@ -35,7 +35,7 @@ global $url_leqee,$url_gyc,$token_leqee,$token_gyc;
 
 require("Services/ExpressApiService.php");
 use Services\ExpressApiService;
-echo date("Y-m-d H:i:s").PHP_EOL;
+// echo date("Y-m-d H:i:s").PHP_EOL;
 
 $sql = "select g.*, max(handle_time) handle_time
 from `xxl-job`.xxl_job_qrtz_trigger_group g 
@@ -62,7 +62,7 @@ foreach ($dbs as $key => $value) {
         $res = postJsonData($url.'/syncExecute',['database_id'=>$value['databaseId'],'token'=>$token,'sql'=>$sql]);
         // var_export($res);
         $result[$key] = $res['data']['data'];
-        echo PHP_EOL.PHP_EOL;
+        // echo PHP_EOL.PHP_EOL;
     }
 }
 
