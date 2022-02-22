@@ -65,7 +65,7 @@ function getXxlAttachmentOut($data){
     $file_name = "xxl-cron_".date('Y-m-d H:i:s').".xlsx";
     header('pragma:public');
     header('Content-type:application/vnd.ms-excel;charset=utf-8;name="'.$file_name.'"');
-    header("Content-Disposition:attachment;filename={$file_name}.xlsx");
+    header("Content-Disposition:attachment;filename={$file_name}");
     header('Cache-Control: max-age=0');
     header("Content-Type: application/force-download");
     header("Content-Type: application/octet-stream");
