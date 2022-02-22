@@ -17,7 +17,7 @@ if (!empty($argv[2])) {
 
 global $db;
 
-$token_mapping = $db->getRow("select * from common_config where config_key = 'TOKEN_MAPPING'");
+$token_mapping = $db->getOne("select * from common_config where config_key = 'TOKEN_MAPPING'");
 if (!empty($token_mapping)) {
     $token_mapping = json_decode($token_mapping);
     if (!empty($token_mapping['leqee'])) {
