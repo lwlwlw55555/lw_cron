@@ -60,8 +60,14 @@ function getXxlAttachmentOut($data){
         $i++;
     }
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel2007');   //设定写入excel的类型
-    global $excel_dir;
-    $file_name = $excel_dir."xxl-cron_".date('Y-m-d H:i:s').".xlsx";
+    // global $excel_dir;
+    // $file_name = $excel_dir."xxl-cron_".date('Y-m-d H:i:s').".xlsx";
+    header('pragma:public');
+    header('Content-type:application/vnd.ms-excel;charset=utf-8;name="xxl-cron_'.date('Y-m-d H:i:s').'.xlsx"');
+    header("Content-Disposition:attachment;filename=$fileName.xlsx");
+    header('Cache-Control: max-age=0');
+    header("Content-Type: application/force-download");
+    header("Content-Type: application/octet-stream");
     $objWriter->save('php://output');
     //写excel
     return $file_name;
