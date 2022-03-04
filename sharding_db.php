@@ -15,7 +15,7 @@ $lw_conf = array(
     "pass" => "123456",
     "charset" => "utf8",
     "pconnect" => "1",
-    "name" => "do_com"
+    "name" => "do_com_0"
 );
 $lw_db = ClsPdo::getInstance($lw_conf);
 
@@ -25,7 +25,7 @@ $omssync_db_conf = array(
     "pass" => "123456",
     "charset" => "utf8",
     "pconnect" => "1",
-    "name" => "do_com_0"
+    "name" => "do_com"
 );
 $omssync_db = ClsPdo::getInstance($omssync_db_conf);
 
