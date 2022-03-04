@@ -4,6 +4,7 @@ require(ROOT_PATH . "includes/erp_report/erp_new_user_function.php");
 require(ROOT_PATH . "includes/erp_report/erp_user_buy_function.php");
 require(ROOT_PATH . "includes/erp_report/erp_user_function.php");
 
+
 function getAttachment($data, $header, $report_file_name){
     $objPHPExcel = new PHPExcel();
     $objPHPExcel->setactivesheetindex(0);
@@ -72,7 +73,7 @@ function getXxlAttachmentOut($data){
     // header("Content-Type: application/download");
     // https://blog.csdn.net/weixin_35920379/article/details/115204504
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    header('Content-Disposition: attachment;filename="lw.xlsx"');
+    header('Content-Disposition: attachment;filename="{$file_name}.xlsx"');
     header('Cache-Control: max-age=0');
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel2007');
     $objWriter->save('php://output');
