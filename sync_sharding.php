@@ -10,6 +10,8 @@ $lw_conf = array(
     "pconnect" => "1",
     "name" => "do_com_0"
 );
+$to_conf = $lw_conf;
+global $to_conf;
 $lw_db = ClsPdo::getInstance($lw_conf);
 
 $oms_db_conf = array(
