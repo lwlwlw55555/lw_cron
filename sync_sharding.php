@@ -28,7 +28,7 @@ moveDataByPartyId($oms_db,$lw_db);
 
 function moveDataByPartyId($oms_db,$lw_db){
     
-    $sql = "select distinct TABLE_NAME from information_schema.COLUMNS  where TABLE_SCHEMA = 'oms'";
+    $sql = "select distinct TABLE_NAME from information_schema.COLUMNS  where TABLE_SCHEMA = 'do_com'";
     $tables = $oms_db->getCol($sql);
     var_dump($tables);
 
@@ -52,7 +52,7 @@ function moveData($from_db,$to_db,$table){
     global $from_conf,$to_conf;
     $primay_key = null;
     if(empty($columns)){
-        $columns_infos = execRetry($from_db, $from_conf, "show COLUMNS from oms.{$table}", 'getAll');
+        $columns_infos = execRetry($from_db, $from_conf, "show COLUMNS from do_com.{$table}", 'getAll');
         foreach ($columns_infos as $columns_info) {
             $column = $columns_info['Field'];
             $columns[] = $column;
