@@ -12,7 +12,7 @@ $lw_conf = array(
 );
 $lw_db = ClsPdo::getInstance($lw_conf);
 
-$omssync_db_conf = array(
+$oms_db_conf = array(
     "host" => "127.0.0.1:3306",
     "user" => "root",
     "pass" => "123456",
