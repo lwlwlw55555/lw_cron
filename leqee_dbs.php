@@ -42,3 +42,95 @@ foreach ($dbs as $key => $value) {
     $db->query($sql);
 }
 
+
+function getDatabaseList(){
+    global $url_leqee,$url_gyc,$token_leqee,$token_gyc;
+    $dbs_leqee = postJsonData($url_leqee.'/permittedDatabases',['token'=>$token_leqee]);
+    $dbs_gyc = postJsonData($url_gyc.'/permittedDatabases',['token'=>$token_gyc]);
+    return array_merge(getSpecValByCol($dbs_leqee['data']['list'],'databaseName','databaseId','leqee'),getSpecValByCol($dbs_gyc['data']['list'],'databaseName','databaseId','gyc'));
+}
+
+
+function postJsonData($url, $data) {
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_TIMEOUT,3*60);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json; charset=utf-8',
+            'Content-Length: ' . strlen(json_encode($data)))
+    );
+    $time_start = microtime(true);
+
+    ob_start();
+    curl_exec($ch);
+    $return_content = ob_get_contents();
+    ob_end_clean();
+    
+    $result = json_decode($return_content, true);
+    if(isset($result['code']) && $result['code'] == 0) {
+        $str = "[ExpressApiService][ok] url {$url},data".json_encode($data).",response:".json_encode($result);
+    }else{
+        $str = "[ExpressApiService][error] url {$url},data".json_encode($data).",response:".json_encode($result);
+    }
+    $time_end = microtime(true);
+    $time = $time_end - $time_start;
+    // echo date("Y-m-d H:i:s").' '.(date("Y-m-d H:i:s") .$str." cost {$time}  \r\n");
+    return  $result;
+}
+
+function refreshArraytoMapping($arr,$column){
+    $res = [];
+    if (is_array($arr) && !empty($arr)) {
+        foreach ($arr as $row) {
+            if (isset($row[$column])) {
+                $res[$row[$column]] = $row;
+            }
+        }
+        return $res;
+    }
+    return [];
+}
+
+
+// function getSpecValByCol($arr,$column,$column1){
+//     $res = [];
+//     if (is_array($arr) && !empty($arr)) {
+//         foreach ($arr as $row) {
+//             if (isset($row[$column])) {
+//                 $res[$row[$column]] = $row[$column1];
+//             }
+//         }
+//         return $res;
+//     }
+//     return [];
+// }
+
+
+function getSpecValByCol($arr,$column,$column1,$db){
+    $res = [];
+    if (is_array($arr) && !empty($arr)) {
+        foreach ($arr as $row) {
+            if (isset($row[$column])) {
+                $res[$row[$column]] = [$column1=>$row[$column1],'db'=>$db];
+            }
+        }
+        return $res;
+    }
+    return [];
+}
+
+function getAllValByCol($arr,$column){
+    $res = [];
+    if (is_array($arr) && !empty($arr)) {
+        foreach ($arr as $row) {
+            if (isset($row[$column])) {
+                $res[] = $row[$column];
+            }
+        }
+        return $res;
+    }
+    return [];
+}
+
