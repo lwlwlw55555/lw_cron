@@ -16,7 +16,7 @@ $lw_conf = array(
     "charset" => "utf8",
     "pconnect" => "1",
     // "name" => "omssync"
-    "name" => "omsshop"
+    "name" => "fairjob"
 );
 $lw_db = ClsPdo::getInstance($lw_conf);
 
@@ -27,7 +27,7 @@ $omssync_db_conf = array(
     "charset" => "utf8",
     "pconnect" => "1",
     // "name" => "omssync"
-     "name" => "omsshop"
+     "name" => "fairjob"
 );
 $omssync_db = ClsPdo::getInstance($omssync_db_conf);
 
@@ -37,7 +37,7 @@ var_dump($tables);
 foreach ($tables as $table) {
     foreach ($table as $v) {
         try{
-            $sql = "show create table {$v}";
+            $sql = "show create table `{$v}`";
             $t = $omssync_db->getAll($sql);
             var_dump($t[0]['Create Table']);
             $sql = $t[0]['Create Table'];
@@ -46,6 +46,7 @@ foreach ($tables as $table) {
             if (strpos($e->getMessage(), 'already exists') == false) {
                 // echo $e->getMessage(); die;
             }
+            // echo $e->getMessage(); echo PHP_EOL;
         }
         // $sql = "SELECT auto_increment FROM information_schema.tables where table_schema='omssync' and table_name='{$v}'";
         // var_dump($sql);

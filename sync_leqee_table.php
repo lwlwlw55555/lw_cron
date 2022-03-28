@@ -8,7 +8,7 @@ $lw_conf = array(
     "pass" => "",
     "charset" => "utf8",
     "pconnect" => "1",
-    "name" => "oms"
+    "name" => "omssync"
 );
 $to_conf = $lw_conf;
 global $to_conf;
@@ -20,7 +20,7 @@ $oms_db_conf = array(
     "pass" => "7o%01XSpZPE%",
     "charset" => "utf8",
     "pconnect" => "1",
-    "name" => "oms"
+    "name" => "omssync"
 );
 $from_conf = $oms_db_conf;
 global $from_conf;
@@ -30,7 +30,7 @@ moveDataByPartyId($oms_db,$lw_db);
 
 function moveDataByPartyId($oms_db,$lw_db){
     
-    $sql = "select distinct TABLE_NAME from information_schema.COLUMNS  where TABLE_SCHEMA = 'oms'";
+    $sql = "select distinct TABLE_NAME from information_schema.COLUMNS  where TABLE_SCHEMA = 'omssync'";
     $tables = $oms_db->getCol($sql);
     var_dump($tables);
 
@@ -38,9 +38,9 @@ function moveDataByPartyId($oms_db,$lw_db){
 
     $is_ok = false;
     foreach ($tables as $table){
-        // if (!$is_ok && $table != 'delivery_job') {
-            // continue;
-        // }
+        if (!$is_ok && $table !== 'jd_category_info') {
+            continue;
+        }
         $is_ok = true;
         moveData($oms_db,$lw_db,$table);
     }
@@ -54,7 +54,7 @@ function moveData($from_db,$to_db,$table){
     global $from_conf,$to_conf;
     $primay_key = null;
     if(empty($columns)){
-        $columns_infos = execRetry($from_db, $from_conf, "show COLUMNS from oms.{$table}", 'getAll');
+        $columns_infos = execRetry($from_db, $from_conf, "show COLUMNS from omssync.{$table}", 'getAll');
         foreach ($columns_infos as $columns_info) {
             $column = $columns_info['Field'];
             $columns[] = $column;
@@ -70,8 +70,8 @@ function moveData($from_db,$to_db,$table){
         $sql = "select `{$sql_columns}` from {$table} where {$primay_key} >= {$start} order by {$primay_key} limit {$limit}";
         $values = execRetry($from_db, $from_conf, $sql, 'getAll');
         
-        // $insert_sql_head = "insert ignore into {$table} (`".implode('`,`',$columns)."`) values";
-        $insert_sql_head = "replace into {$table} (`".implode('`,`',$columns)."`) values";
+        $insert_sql_head = "insert ignore into {$table} (`".implode('`,`',$columns)."`) values";
+        // $insert_sql_head = "replace into {$table} (`".implode('`,`',$columns)."`) values";
         $insert_sql_body = "";
         if(!empty($values) && count($values) > 0){
             foreach ($values as $value){
@@ -92,7 +92,7 @@ function moveData($from_db,$to_db,$table){
             $insert_sql_body = substr($insert_sql_body, 0,strlen($insert_sql_body)-1);
             $insert_sql = $insert_sql_head.$insert_sql_body.";";
 
-            echo $insert_sql.PHP_EOL;
+            // echo $insert_sql.PHP_EOL;
             execRetry($to_db, $to_conf, $insert_sql, 'query');
             
             $start = $values[count($values) - 1][$primay_key];

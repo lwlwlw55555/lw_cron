@@ -38,10 +38,10 @@ function moveDataByPartyId($oms_db,$lw_db){
 
     $is_ok = false;
     foreach ($tables as $table){
-        // if (!$is_ok && $table != 'delivery_job') {
-            // continue;
-        // }
-        $is_ok = true;
+        if (!$is_ok && $table != 'after_sale_return_order') {
+            continue;
+        }
+        // $is_ok = true;
         moveData($oms_db,$lw_db,$table);
     }
 
@@ -92,7 +92,7 @@ function moveData($from_db,$to_db,$table){
             $insert_sql_body = substr($insert_sql_body, 0,strlen($insert_sql_body)-1);
             $insert_sql = $insert_sql_head.$insert_sql_body.";";
 
-            echo $insert_sql.PHP_EOL;
+            // echo $insert_sql.PHP_EOL;
             execRetry($to_db, $to_conf, $insert_sql, 'query');
             
             $start = $values[count($values) - 1][$primay_key];
@@ -125,7 +125,7 @@ function execRetry($db, $db_conf, $sql, $type){
                 $result = $db->getCol($sql);
                 break;
         }
-        echo "[insert data to db2, party_id :{$party_id}] cost: ". ((microtime(true) - $start_time )* 1000) . "ms, " . date("Y-m-d H:i:s"). $sql .PHP_EOL;
+        // echo "[insert data to db2, party_id :{$party_id}] cost: ". ((microtime(true) - $start_time )* 1000) . "ms, " . date("Y-m-d H:i:s"). $sql .PHP_EOL;
         if(!empty($result)){
             return $result;
         }
@@ -147,7 +147,7 @@ function execRetry($db, $db_conf, $sql, $type){
                     $result = $db->getCol($sql);
                     break;
             }
-            echo "[insert data to db2, party_id: {$party_id}] cost:" . ((microtime(true) - $start_time) * 1000) . "ms, " . date("Y-m-d H:i:s") . " insert catch retry success try1 " . $e->getMessage() . $sql .  PHP_EOL;
+            // echo "[insert data to db2, party_id: {$party_id}] cost:" . ((microtime(true) - $start_time) * 1000) . "ms, " . date("Y-m-d H:i:s") . " insert catch retry success try1 " . $e->getMessage() . $sql .  PHP_EOL;
             if (!empty($result)) {
                 return $result;
             }
