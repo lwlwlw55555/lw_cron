@@ -48,7 +48,16 @@ where l.trigger_time > date_sub(now(),interval 1 hour)
 group by g.id";
 
 
-$dbs = getDatabaseList();
+$sql_db = "select db,database_id as databaseId,database_name as databaseName from leqee_tables where database_name like '%xxl%'
+union
+select db,database_id as databaseId,database_name as databaseName from leqee_tables where database_name like '%XXL%';";
+$dbs = refreshArraytoMapping($db->getAll($sql_db),'databaseName');
+// var_export($dbs);
+
+if (empty($dbs)) {
+    $dbs = getDatabaseList();
+}
+
 // var_dump($dbs);
 
 $result = [];
@@ -58,8 +67,10 @@ foreach ($dbs as $key => $value) {
         // echo $pre.PHP_EOL;
         $url = $value['db']=='leqee'?$url_leqee:$url_gyc;
         $token = $value['db']=='leqee'?$token_leqee:$token_gyc;
-        // var_dump($token);
-        $res = postJsonData($url.'/syncExecute',['database_id'=>$value['databaseId'],'token'=>$token,'sql'=>$sql]);
+        // var_dump($value);
+        $params = ['database_id'=>strval($value['databaseId']),'token'=>$token,'sql'=>$sql];
+        // var_dump($params);
+        $res = postJsonData($url.'/syncExecute',$params);
         // var_export($res);
         $result[$key] = $res['data']['data'];
         echo PHP_EOL.PHP_EOL;
@@ -80,7 +91,7 @@ function getDatabaseList(){
     global $url_leqee,$url_gyc,$token_leqee,$token_gyc;
     $dbs_leqee = postJsonData($url_leqee.'/permittedDatabases',['token'=>$token_leqee]);
     $dbs_gyc = postJsonData($url_gyc.'/permittedDatabases',['token'=>$token_gyc]);
-    return array_merge(getSpecValByCol($dbs_leqee['data']['list'],'databaseName','databaseId','leqee'),getSpecValByCol($dbs_gyc['data']['list'],'databaseName','databaseId','gyc'));
+    return array_merge(getSpecValByColDb($dbs_leqee['data']['list'],'databaseName','databaseId','leqee'),getSpecValByColDb($dbs_gyc['data']['list'],'databaseName','databaseId','gyc'));
 }
 
 
@@ -127,21 +138,21 @@ function refreshArraytoMapping($arr,$column){
 }
 
 
-// function getSpecValByCol($arr,$column,$column1){
-//     $res = [];
-//     if (is_array($arr) && !empty($arr)) {
-//         foreach ($arr as $row) {
-//             if (isset($row[$column])) {
-//                 $res[$row[$column]] = $row[$column1];
-//             }
-//         }
-//         return $res;
-//     }
-//     return [];
-// }
+function getSpecValByCol($arr,$column,$column1){
+    $res = [];
+    if (is_array($arr) && !empty($arr)) {
+        foreach ($arr as $row) {
+            if (isset($row[$column])) {
+                $res[$row[$column]] = $row[$column1];
+            }
+        }
+        return $res;
+    }
+    return [];
+}
 
 
-function getSpecValByCol($arr,$column,$column1,$db){
+function getSpecValByColDb($arr,$column,$column1,$db){
     $res = [];
     if (is_array($arr) && !empty($arr)) {
         foreach ($arr as $row) {

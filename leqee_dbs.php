@@ -36,10 +36,13 @@ use Services\ExpressApiService;
 echo date("Y-m-d H:i:s").PHP_EOL;
 
 $dbs = getDatabaseList();
+// var_export($dbs);die;
+foreach ($dbs as $key => $v) {
+    foreach ($v as $value) {
 
-foreach ($dbs as $key => $value) {
-    $sql = "replace into leqee_tables (database_id, database_name, engine, host, memo, port, status) values ('{$value['database_id']}', '{$value['database_name']}', '{$value['engine']}', '{$value['host']}', '{$value['memo']}', '{$value['port']}', '{$value['status']}')";
-    $db->query($sql);
+        $sql = "replace into leqee_tables (database_id, db,database_name, engine, host, memo, port, status) values ('{$value['databaseId']}','{$key}', '{$value['databaseName']}', '{$value['engine']}', '{$value['host']}', '{$value['memo']}', '{$value['port']}', '{$value['status']}')";
+        $db->query($sql);
+    }
 }
 
 
@@ -47,7 +50,7 @@ function getDatabaseList(){
     global $url_leqee,$url_gyc,$token_leqee,$token_gyc;
     $dbs_leqee = postJsonData($url_leqee.'/permittedDatabases',['token'=>$token_leqee]);
     $dbs_gyc = postJsonData($url_gyc.'/permittedDatabases',['token'=>$token_gyc]);
-    return array_merge(getSpecValByCol($dbs_leqee['data']['list'],'databaseName','databaseId','leqee'),getSpecValByCol($dbs_gyc['data']['list'],'databaseName','databaseId','gyc'));
+    return array_merge(getSpecValByLw($dbs_leqee['data']['list'],'leqee'),getSpecValByLw($dbs_gyc['data']['list'],'gyc'));
 }
 
 
@@ -119,6 +122,10 @@ function getSpecValByCol($arr,$column,$column1,$db){
         return $res;
     }
     return [];
+}
+
+function getSpecValByLw($arr,$db){
+    return [$db=>$arr];
 }
 
 function getAllValByCol($arr,$column){
