@@ -1,0 +1,43 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>HTML5</title>  
+<meta charset="utf-8" />  
+<script>  
+
+    window.onload = function(){  
+        var socket;  
+        var readyState = ["connecting", "connected", "closing", "closed"];  
+        try {  
+             /* 连接 */  
+            socket = new WebSocket("ws://172.22.201.231:7272");  
+            socket.send('{"type":"login","user_id":""}');
+            socket.onopen = function() {
+        alert("onopen");
+                document.getElementById("msg").innerHTML = document.getElementById("msg").innerHTML + "<br>" + "已连接";
+                var ssss  = socket.send("jwangjwang");
+        console.log(ssss);
+            };
+               
+            socket.onmessage = function(e) {  
+        alert("onmessage");
+                document.getElementById("msg").innerHTML = document.getElementById("msg").innerHTML + "<br>" + e.data;
+             };  
+               
+             socket.onclose = function() {  
+                alert("onclose");
+        document.getElementById("msg").innerHTML = document.getElementById("msg").innerHTML + "<br>" + "已关闭";
+             };  
+        } catch(exception) {  
+            console.log(exception);
+            alert("exception");
+        }  
+    }  
+      
+</script>  
+</head>  
+  
+<body>  
+<p id="msg"></p>  
+</body>  
+</html>  
