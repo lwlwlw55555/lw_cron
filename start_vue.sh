@@ -9,4 +9,4 @@ cd /var/code/html/vueblog-vue
 
 /usr/bin/npm install --save github-markdown-css
 
-nohup /usr/bin/npm run serve > /mnt/lw_vue &
+nohup /usr/bin/npm run serve
