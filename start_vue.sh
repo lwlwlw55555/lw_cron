@@ -3,7 +3,7 @@ current=`date "+%Y-%m-%d %H:%M:%S"`
 echo $current 
 echo 'begin start vue'
 
-sh kill_vue.sh
+sh /var/code/lw_cron/kill_vue.sh
 
 cd /var/code/html/vueblog-vue
 
