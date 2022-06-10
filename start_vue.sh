@@ -1,16 +1,9 @@
 #!/bin/sh
 current=`date "+%Y-%m-%d %H:%M:%S"`  
 echo $current 
-echo 'begin'
+echo 'begin start vue'
 
-thread=$(lsof -i:8081 | awk '{print $2}' | grep -v PID)
-echo $thread
-if [ $thread -ne '' ]
-then
-    kill -9 $thread
-else
-    echo 'no 8081 thread'
-fi
+sh kill_vue.sh
 
 cd /var/code/html/vueblog-vue
 
