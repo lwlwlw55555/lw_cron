@@ -14,7 +14,7 @@ npm install element-ui --save
 npm install axios --save
 npm run serve
 
-/usr/bin/npm run serve
+# /usr/bin/npm run serve
 
 /usr/bin/npm run build
 
