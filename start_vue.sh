@@ -12,7 +12,7 @@ npm i
 npm install --save github-markdown-css
 npm install element-ui --save
 npm install axios --save
-npm run serve
+# npm run serve
 
 # /usr/bin/npm run serve
 
