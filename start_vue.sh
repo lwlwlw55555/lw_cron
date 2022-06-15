@@ -5,17 +5,8 @@ echo 'begin start vue'
 
 sh /var/code/lw_cron/kill_vue.sh
 
-cd /var/code/html/vueblog-vue
+sh /var/code/lw_cron/build_vue.sh
 
-/usr/bin/npm install --save github-markdown-css
-npm i
-npm install --save github-markdown-css
-npm install element-ui --save
-npm install axios --save
-# npm run serve
-
-# /usr/bin/npm run serve
-
-/usr/bin/npm run build
+rm -rf /usr/local/dist
 
 scp -r dist /usr/local/.
