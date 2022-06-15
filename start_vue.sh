@@ -9,4 +9,4 @@ sh /var/code/lw_cron/build_vue.sh
 
 rm -rf /usr/local/dist
 
-scp -r dist /usr/local/.
+scp -r /var/code/html/vueblog-vue/dist /usr/local/.
