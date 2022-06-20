@@ -1,4 +1,5 @@
 <?php
+header("Access-Control-Allow-Origin:*");
 require("includes/init.php");
 require(ROOT_PATH . "includes/erp_report/erp_report_function.php");
 
