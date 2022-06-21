@@ -20,7 +20,7 @@ class LeqeeDbService
 
     public static function refreshLeqeeToken($leqee_token,$gyc_token) {
         global $db;
-        $sql = "update do_com.common_config set config_value =".'{"leqee":"{$leqee_token}","gyc":"{$gyc_token}"}'." where config_key = 'TOKEN_MAPPING'";
+        $sql = "update do_com.common_config set config_value ="'{"leqee":"{$leqee_token}","gyc":"{$gyc_token}"}'" where config_key = 'TOKEN_MAPPING'";
         $db->query($sql);
     }
 
