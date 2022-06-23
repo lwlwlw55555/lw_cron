@@ -11,6 +11,6 @@ $sql = "select shop_id,shop_name,shop_nick from omssync.shop where is_delete = '
 
 $shops = $db->getAll($sql);
 
-var_export($shops);
+// var_export($shops);
 
 echo json_encode(['code'=>0,'data'=>$shops]);
