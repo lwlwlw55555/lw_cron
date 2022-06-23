@@ -10,13 +10,14 @@ include 'request/OrderNumberListGetRequest.php';
 include 'PddClient.php';
 
 $lw_conf = array(
-    "host" => "127.0.0.1:3306",
+    // "host" => "127.0.0.1:3306",
+    "host" => "121.40.113.153:3306",
     "user" => "root",
-    // "pass" => "123456",
+    "pass" => "123456",
     "charset" => "utf8",
     "pconnect" => "1",
     // "name" => "omssync"
-    "name" => "fairjob"
+    "name" => "omssync"
 );
 $lw_db = ClsPdo::getInstance($lw_conf);
 
@@ -27,7 +28,7 @@ $omssync_db_conf = array(
     "charset" => "utf8",
     "pconnect" => "1",
     // "name" => "omssync"
-     "name" => "fairjob"
+     "name" => "omssync"
 );
 $omssync_db = ClsPdo::getInstance($omssync_db_conf);
 

@@ -1,0 +1,2940 @@
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file), '/usr/local/lib/openssl' (no such file), '/usr/lib/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file), '/usr/local/lib/openssl.so' (no such file), '/usr/lib/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file), '/usr/local/lib/sockets' (no such file), '/usr/lib/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file), '/usr/local/lib/sockets.so' (no such file), '/usr/lib/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+show databases
+2022-06-23 16:12:14[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"21\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"oms_his"},{"Database":"omsbrand"},{"Database":"omsencrypt"},{"Database":"omsencrypt_his"},{"Database":"omsjob"},{"Database":"omsjob_his"},{"Database":"omssupply"},{"Database":"openapi"},{"Database":"performance_schema"},{"Database":"wmsclient"}],"error":[],"query_time":0.006112098693847656,"total_time":0.012928962707519531}} cost 0.13416004180908  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(13) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "oms_his"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "omsbrand"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(14) "omsencrypt_his"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsjob_his"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+      [12]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.006112098693847656)
+    ["total_time"]=>
+    float(0.012928962707519531)
+  }
+}
+show databases
+2022-06-23 16:12:15[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"22\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"FAIL","data":"MySQLi Connect failed: php_network_getaddresses: getaddrinfo failed: Name or service not known"} cost 0.12875390052795  
+array(2) {
+  ["code"]=>
+  string(4) "FAIL"
+  ["data"]=>
+  string(94) "MySQLi Connect failed: php_network_getaddresses: getaddrinfo failed: Name or service not known"
+}
+show databases
+2022-06-23 16:12:15[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"23\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omssync"},{"Database":"omssync_his"}],"error":[],"query_time":0.0031042098999023438,"total_time":0.009070873260498047}} cost 0.14964008331299  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omssync_his"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0031042098999023438)
+    ["total_time"]=>
+    float(0.009070873260498047)
+  }
+}
+show databases
+2022-06-23 16:12:15[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"36\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"xxl-job"}],"error":[],"query_time":0.002618074417114258,"total_time":0.008054018020629883}} cost 0.32692503929138  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.002618074417114258)
+    ["total_time"]=>
+    float(0.008054018020629883)
+  }
+}
+show databases
+2022-06-23 16:12:15[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"45\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"FAIL","data":"MySQLi Connect failed: php_network_getaddresses: getaddrinfo failed: Name or service not known"} cost 0.21363401412964  
+array(2) {
+  ["code"]=>
+  string(4) "FAIL"
+  ["data"]=>
+  string(94) "MySQLi Connect failed: php_network_getaddresses: getaddrinfo failed: Name or service not known"
+}
+show databases
+2022-06-23 16:12:15[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"52\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"wmsroute"}],"error":[],"query_time":0.002686023712158203,"total_time":0.008265972137451172}} cost 0.14588713645935  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(3) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.002686023712158203)
+    ["total_time"]=>
+    float(0.008265972137451172)
+  }
+}
+show databases
+2022-06-23 16:12:16[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"55\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omsanalyze"},{"Database":"omscrm"},{"Database":"omsfinance"},{"Database":"omsreport"}],"error":[],"query_time":0.002824068069458008,"total_time":0.008836030960083008}} cost 0.163241147995  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(6) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.002824068069458008)
+    ["total_time"]=>
+    float(0.008836030960083008)
+  }
+}
+show databases
+2022-06-23 16:12:16[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"56\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"FAIL","data":"MySQLi Connect failed: php_network_getaddresses: getaddrinfo failed: Name or service not known"} cost 0.27477717399597  
+array(2) {
+  ["code"]=>
+  string(4) "FAIL"
+  ["data"]=>
+  string(94) "MySQLi Connect failed: php_network_getaddresses: getaddrinfo failed: Name or service not known"
+}
+show databases
+2022-06-23 16:12:16[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"57\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"ee-job-center"},{"Database":"mysql"},{"Database":"oms"},{"Database":"oms2"},{"Database":"oms3"},{"Database":"oms4"},{"Database":"omsanalyze"},{"Database":"omsanalyze2"},{"Database":"omsanalyze3"},{"Database":"omsanalyze4"},{"Database":"omsbase"},{"Database":"omsscm"},{"Database":"scm-xxl-job"},{"Database":"scmetl"},{"Database":"wmsclient"},{"Database":"wmsclient2"},{"Database":"wmsclient3"}],"error":[],"query_time":0.00304412841796875,"total_time":0.009361982345581055}} cost 0.37944197654724  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(18) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(13) "ee-job-center"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "oms2"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "oms3"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "oms4"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omsanalyze2"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omsanalyze3"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omsanalyze4"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [12]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsscm"
+      }
+      [13]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "scm-xxl-job"
+      }
+      [14]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "scmetl"
+      }
+      [15]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [16]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "wmsclient2"
+      }
+      [17]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "wmsclient3"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.00304412841796875)
+    ["total_time"]=>
+    float(0.009361982345581055)
+  }
+}
+show databases
+2022-06-23 16:12:17[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"58\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omsshop"}],"error":[],"query_time":0.0028960704803466797,"total_time":0.008756875991821289}} cost 0.1369960308075  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(3) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsshop"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0028960704803466797)
+    ["total_time"]=>
+    float(0.008756875991821289)
+  }
+}
+show databases
+2022-06-23 16:12:17[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"64\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"monitor"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsbase"},{"Database":"omsbrand"},{"Database":"omsencrypt"},{"Database":"omsjob"},{"Database":"omssupply"},{"Database":"omssync"},{"Database":"wmsclient"}],"error":[],"query_time":0.0032150745391845703,"total_time":0.010286808013916016}} cost 0.16567897796631  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(12) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "monitor"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "omsbrand"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0032150745391845703)
+    ["total_time"]=>
+    float(0.010286808013916016)
+  }
+}
+show databases
+2022-06-23 16:12:17[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"66\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"ee-job-center"},{"Database":"et"},{"Database":"ews"},{"Database":"fairjob"},{"Database":"gycbrand"},{"Database":"mysql"},{"Database":"nacos_config"},{"Database":"oms"},{"Database":"omsanalyze"},{"Database":"omsbrand"},{"Database":"omscrm"},{"Database":"omscustomer"},{"Database":"omsencrypt"},{"Database":"omsfinance"},{"Database":"omsjob"},{"Database":"omsreport"},{"Database":"omsscm"},{"Database":"omsshop"},{"Database":"omssupply"},{"Database":"omssync"},{"Database":"openapi"},{"Database":"pimshop"},{"Database":"report"},{"Database":"satellite"},{"Database":"scm-xxl-job"},{"Database":"scmetl"},{"Database":"wmsclient"},{"Database":"wmsroute"},{"Database":"xxl-job"}],"error":[],"query_time":0.0070950984954833984,"total_time":0.0213620662689209}} cost 0.34632587432861  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(30) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(13) "ee-job-center"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(2) "et"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "ews"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "gycbrand"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(12) "nacos_config"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "omsbrand"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [12]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omscustomer"
+      }
+      [13]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [14]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [15]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [16]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+      [17]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsscm"
+      }
+      [18]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsshop"
+      }
+      [19]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [20]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [21]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+      [22]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "pimshop"
+      }
+      [23]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "report"
+      }
+      [24]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "satellite"
+      }
+      [25]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "scm-xxl-job"
+      }
+      [26]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "scmetl"
+      }
+      [27]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [28]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+      [29]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0070950984954833984)
+    ["total_time"]=>
+    float(0.0213620662689209)
+  }
+}
+show databases
+2022-06-23 16:12:17[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"77\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omsbase"}],"error":[],"query_time":0.003398895263671875,"total_time":0.009311914443969727}} cost 0.14148998260498  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(3) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.003398895263671875)
+    ["total_time"]=>
+    float(0.009311914443969727)
+  }
+}
+show databases
+2022-06-23 16:12:17[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"80\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"fairjob"},{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsanalyze"},{"Database":"omscrm"},{"Database":"omscustomer"},{"Database":"omsencrypt"},{"Database":"omsfinance"},{"Database":"omsjob"},{"Database":"omsreport"},{"Database":"omsscm"},{"Database":"omsshop"},{"Database":"omssupply"},{"Database":"omssync"},{"Database":"openapi"},{"Database":"wmsclient"},{"Database":"wmsroute"},{"Database":"xxl-job"}],"error":[],"query_time":0.003801107406616211,"total_time":0.010035037994384766}} cost 0.24253487586975  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(19) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omscustomer"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsscm"
+      }
+      [12]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsshop"
+      }
+      [13]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [14]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [15]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+      [16]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [17]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+      [18]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.003801107406616211)
+    ["total_time"]=>
+    float(0.010035037994384766)
+  }
+}
+show databases
+2022-06-23 16:12:18[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"81\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsbrand"},{"Database":"omsencrypt"},{"Database":"omsjob"},{"Database":"omssupply"},{"Database":"wmsclient"}],"error":[],"query_time":0.0034449100494384766,"total_time":0.009851932525634766}} cost 0.16007018089294  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(8) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "omsbrand"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0034449100494384766)
+    ["total_time"]=>
+    float(0.009851932525634766)
+  }
+}
+show databases
+2022-06-23 16:12:18[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"82\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsbrand"},{"Database":"omsencrypt"},{"Database":"omsjob"},{"Database":"omssupply"},{"Database":"wmsclient"}],"error":[],"query_time":0.0029540061950683594,"total_time":0.008568048477172852}} cost 0.119136095047  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(8) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "omsbrand"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0029540061950683594)
+    ["total_time"]=>
+    float(0.008568048477172852)
+  }
+}
+show databases
+2022-06-23 16:12:18[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"83\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omsanalyze"},{"Database":"omscrm"},{"Database":"omsfinance"},{"Database":"omsreport"}],"error":[],"query_time":0.0036590099334716797,"total_time":0.010326147079467773}} cost 0.40463089942932  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(6) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0036590099334716797)
+    ["total_time"]=>
+    float(0.010326147079467773)
+  }
+}
+show databases
+2022-06-23 16:12:18[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"84\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omsanalyze"},{"Database":"omscrm"},{"Database":"omsfinance"},{"Database":"omsreport"}],"error":[],"query_time":0.003695964813232422,"total_time":0.010487079620361328}} cost 0.2147970199585  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(6) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.003695964813232422)
+    ["total_time"]=>
+    float(0.010487079620361328)
+  }
+}
+show databases
+2022-06-23 16:12:19[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"85\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"xxl-job"}],"error":[],"query_time":0.005745887756347656,"total_time":0.017271995544433594}} cost 0.16417813301086  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.005745887756347656)
+    ["total_time"]=>
+    float(0.017271995544433594)
+  }
+}
+show databases
+2022-06-23 16:12:19[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"86\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"xxl-job"}],"error":[],"query_time":0.00323486328125,"total_time":0.011305093765258789}} cost 0.4732460975647  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.00323486328125)
+    ["total_time"]=>
+    float(0.011305093765258789)
+  }
+}
+show databases
+2022-06-23 16:12:19[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"90\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsbrand"},{"Database":"omsencrypt"},{"Database":"omsjob"},{"Database":"omssupply"},{"Database":"wmsclient"}],"error":[],"query_time":0.0034618377685546875,"total_time":0.010094881057739258}} cost 0.17031502723694  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(8) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "omsbrand"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0034618377685546875)
+    ["total_time"]=>
+    float(0.010094881057739258)
+  }
+}
+show databases
+2022-06-23 16:12:20[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"91\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"xxl-job"}],"error":[],"query_time":0.0030090808868408203,"total_time":0.009443044662475586}} cost 0.2477719783783  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0030090808868408203)
+    ["total_time"]=>
+    float(0.009443044662475586)
+  }
+}
+show databases
+2022-06-23 16:12:20[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"93\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omsanalyze"},{"Database":"omscrm"},{"Database":"omsfinance"},{"Database":"omsreport"}],"error":[],"query_time":0.0034999847412109375,"total_time":0.010602951049804688}} cost 0.19045901298523  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(6) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0034999847412109375)
+    ["total_time"]=>
+    float(0.010602951049804688)
+  }
+}
+show databases
+2022-06-23 16:12:20[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"97\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"oms1"},{"Database":"oms2"},{"Database":"oms3"},{"Database":"oms4"},{"Database":"omsbase"}],"error":[],"query_time":0.0077321529388427734,"total_time":0.02352595329284668}} cost 0.27596092224121  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(8) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "oms1"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "oms2"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "oms3"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "oms4"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0077321529388427734)
+    ["total_time"]=>
+    float(0.02352595329284668)
+  }
+}
+show databases
+2022-06-23 16:12:20[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"100\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"omssupply"},{"Database":"wmsclient"},{"Database":"omsanalyze"},{"Database":"satellite"},{"Database":"oms"},{"Database":"omssync"},{"Database":"MYSQL"},{"Database":"INFORMATION_SCHEMA"}],"error":[],"query_time":0.0030548572540283203,"total_time":0.010176897048950195}} cost 0.16763806343079  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(8) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "satellite"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "MYSQL"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "INFORMATION_SCHEMA"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0030548572540283203)
+    ["total_time"]=>
+    float(0.010176897048950195)
+  }
+}
+show databases
+2022-06-23 16:12:21[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"101\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"omssupply"},{"Database":"wmsclient"},{"Database":"omsanalyze"},{"Database":"satellite"},{"Database":"oms"},{"Database":"omssync"},{"Database":"MYSQL"},{"Database":"INFORMATION_SCHEMA"}],"error":[],"query_time":0.002974987030029297,"total_time":0.009933948516845703}} cost 0.24500489234924  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(8) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "satellite"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "MYSQL"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "INFORMATION_SCHEMA"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.002974987030029297)
+    ["total_time"]=>
+    float(0.009933948516845703)
+  }
+}
+show databases
+2022-06-23 16:12:21[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"102\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"omssupply"},{"Database":"wmsclient"},{"Database":"omsanalyze"},{"Database":"satellite"},{"Database":"oms"},{"Database":"omssync"},{"Database":"MYSQL"},{"Database":"INFORMATION_SCHEMA"}],"error":[],"query_time":0.003968954086303711,"total_time":0.010788917541503906}} cost 0.13029193878174  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(8) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "satellite"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "MYSQL"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "INFORMATION_SCHEMA"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.003968954086303711)
+    ["total_time"]=>
+    float(0.010788917541503906)
+  }
+}
+show databases
+2022-06-23 16:12:21[][LeqeeDbService][error] url https://databasehub.leqee.com/api/QuickQueryController/syncExecute,data"{\"database_id\":\"104\",\"token\":\"c730296a75425040241e876b0fe92b5b62b3bbbd6e93a\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"pimshop"}],"error":[],"query_time":0.002871990203857422,"total_time":0.00951695442199707}} cost 0.13978695869446  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "pimshop"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.002871990203857422)
+    ["total_time"]=>
+    float(0.00951695442199707)
+  }
+}
+show databases
+2022-06-23 16:12:21[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"2\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"guanyunchang"},{"Database":"mysql"},{"Database":"performance_schema"}],"error":[],"query_time":0.0015010833740234375,"total_time":0.0051310062408447266}} cost 0.32026696205139  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(12) "guanyunchang"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0015010833740234375)
+    ["total_time"]=>
+    float(0.0051310062408447266)
+  }
+}
+show databases
+2022-06-23 16:12:22[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"5\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsbase"},{"Database":"omsencrypt"},{"Database":"omsjob"},{"Database":"omssupply"},{"Database":"performance_schema"},{"Database":"wmsclient"}],"error":[],"query_time":0.0017418861389160156,"total_time":0.005841970443725586}} cost 0.27530813217163  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(9) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0017418861389160156)
+    ["total_time"]=>
+    float(0.005841970443725586)
+  }
+}
+show databases
+2022-06-23 16:12:22[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"6\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"monitor"},{"Database":"mysql"},{"Database":"omssync"},{"Database":"performance_schema"}],"error":[],"query_time":0.0014688968658447266,"total_time":0.004580020904541016}} cost 0.11484313011169  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(5) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "monitor"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0014688968658447266)
+    ["total_time"]=>
+    float(0.004580020904541016)
+  }
+}
+show databases
+2022-06-23 16:12:22[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"7\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"openapi"}],"error":[],"query_time":0.0018382072448730469,"total_time":0.00562286376953125}} cost 0.17156100273132  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(3) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0018382072448730469)
+    ["total_time"]=>
+    float(0.00562286376953125)
+  }
+}
+show databases
+2022-06-23 16:12:22[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"17\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"xxl-job"}],"error":[],"query_time":0.0007469654083251953,"total_time":0.002644062042236328}} cost 0.33208799362183  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0007469654083251953)
+    ["total_time"]=>
+    float(0.002644062042236328)
+  }
+}
+show databases
+2022-06-23 16:12:22[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"21\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"omssupply"},{"Database":"wmsclient"},{"Database":"omsanalyze"},{"Database":"satellite"},{"Database":"oms"},{"Database":"MYSQL"},{"Database":"report"},{"Database":"INFORMATION_SCHEMA"}],"error":[],"query_time":0.009463071823120117,"total_time":0.014941930770874023}} cost 0.13051819801331  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(8) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "satellite"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "MYSQL"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "report"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "INFORMATION_SCHEMA"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.009463071823120117)
+    ["total_time"]=>
+    float(0.014941930770874023)
+  }
+}
+show databases
+2022-06-23 16:12:23[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"22\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"FAIL","data":"MySQLi Connect failed: php_network_getaddresses: getaddrinfo failed: Name or service not known"} cost 0.22169399261475  
+array(2) {
+  ["code"]=>
+  string(4) "FAIL"
+  ["data"]=>
+  string(94) "MySQLi Connect failed: php_network_getaddresses: getaddrinfo failed: Name or service not known"
+}
+show databases
+2022-06-23 16:12:23[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"31\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"nacos_config"},{"Database":"performance_schema"},{"Database":"test"},{"Database":"xxl-job"}],"error":[],"query_time":0.05786895751953125,"total_time":0.17394399642944336}} cost 0.29029202461243  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(7) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(12) "nacos_config"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "test"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.05786895751953125)
+    ["total_time"]=>
+    float(0.17394399642944336)
+  }
+}
+show databases
+2022-06-23 16:12:24[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"32\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsbase"},{"Database":"omsencrypt"},{"Database":"omsjob"},{"Database":"omssupply"},{"Database":"performance_schema"},{"Database":"test"},{"Database":"wmsclient"},{"Database":"wmsroute"}],"error":[],"query_time":0.0540158748626709,"total_time":0.16295790672302246}} cost 0.5657320022583  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(11) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "test"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0540158748626709)
+    ["total_time"]=>
+    float(0.16295790672302246)
+  }
+}
+show databases
+2022-06-23 16:12:24[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"33\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsbase"},{"Database":"omsencrypt"},{"Database":"omsjob"},{"Database":"omssupply"},{"Database":"performance_schema"},{"Database":"test"},{"Database":"wmsclient"},{"Database":"wmsroute"}],"error":[],"query_time":0.061070919036865234,"total_time":0.183790922164917}} cost 0.36093902587891  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(11) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "test"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.061070919036865234)
+    ["total_time"]=>
+    float(0.183790922164917)
+  }
+}
+show databases
+2022-06-23 16:12:25[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"34\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omsanalyze"},{"Database":"omscrm"},{"Database":"omscustomer"},{"Database":"omsfinance"},{"Database":"omsreport"},{"Database":"omssync"},{"Database":"openapi"},{"Database":"performance_schema"},{"Database":"test"}],"error":[],"query_time":0.05403399467468262,"total_time":0.16305804252624512}} cost 0.43816184997559  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(11) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omscustomer"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "test"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.05403399467468262)
+    ["total_time"]=>
+    float(0.16305804252624512)
+  }
+}
+show databases
+2022-06-23 16:12:25[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"35\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omsanalyze"},{"Database":"omscrm"},{"Database":"omscustomer"},{"Database":"omsfinance"},{"Database":"omsreport"}],"error":[],"query_time":0.0027399063110351562,"total_time":0.008315086364746094}} cost 0.13878893852234  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(7) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omscustomer"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.0027399063110351562)
+    ["total_time"]=>
+    float(0.008315086364746094)
+  }
+}
+show databases
+2022-06-23 16:12:25[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"36\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsbase"},{"Database":"omsencrypt"},{"Database":"omsjob"},{"Database":"omssupply"},{"Database":"performance_schema"},{"Database":"wmsclient"}],"error":[],"query_time":0.002039194107055664,"total_time":0.006598949432373047}} cost 0.19721817970276  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(9) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.002039194107055664)
+    ["total_time"]=>
+    float(0.006598949432373047)
+  }
+}
+show databases
+2022-06-23 16:12:26[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"38\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"xxl-job"}],"error":[],"query_time":0.05744600296020508,"total_time":0.17409801483154297}} cost 0.50512099266052  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.05744600296020508)
+    ["total_time"]=>
+    float(0.17409801483154297)
+  }
+}
+show databases
+2022-06-23 16:12:26[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"40\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"omssync"}],"error":[],"query_time":0.054331064224243164,"total_time":0.1631309986114502}} cost 0.39149212837219  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(3) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.054331064224243164)
+    ["total_time"]=>
+    float(0.1631309986114502)
+  }
+}
+show databases
+2022-06-23 16:12:26[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"41\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsanalyze"},{"Database":"omsbase"},{"Database":"omscrm"},{"Database":"omscustomer"},{"Database":"omsencrypt"},{"Database":"omsfinance"},{"Database":"omsjob"},{"Database":"omsreport"},{"Database":"omssupply"},{"Database":"openapi"},{"Database":"wmsclient"},{"Database":"wmsroute"}],"error":[],"query_time":0.05910992622375488,"total_time":0.1779630184173584}} cost 0.34326815605164  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(15) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omscustomer"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [12]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+      [13]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [14]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.05910992622375488)
+    ["total_time"]=>
+    float(0.1779630184173584)
+  }
+}
+show databases
+2022-06-23 16:12:27[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"47\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"jushita"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsanalyze"},{"Database":"omsbase"},{"Database":"omsbrand"},{"Database":"omscrm"},{"Database":"omscustomer"},{"Database":"omsencrypt"},{"Database":"omsfinance"},{"Database":"omsjob"},{"Database":"omsreport"},{"Database":"omsscm"},{"Database":"omssupply"},{"Database":"omssync"},{"Database":"openapi"},{"Database":"wmsclient"},{"Database":"wmsroute"},{"Database":"xxl-job"}],"error":[],"query_time":0.006098031997680664,"total_time":0.01902914047241211}} cost 0.15572190284729  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(21) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "jushita"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "omsbrand"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omscustomer"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [12]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [13]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+      [14]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsscm"
+      }
+      [15]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [16]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [17]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+      [18]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [19]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+      [20]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.006098031997680664)
+    ["total_time"]=>
+    float(0.01902914047241211)
+  }
+}
+show databases
+2022-06-23 16:12:27[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"48\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"express"},{"Database":"mysql"}],"error":[],"query_time":0.002354860305786133,"total_time":0.007380962371826172}} cost 0.1961030960083  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(3) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "express"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.002354860305786133)
+    ["total_time"]=>
+    float(0.007380962371826172)
+  }
+}
+show databases
+2022-06-23 16:12:27[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"49\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"wms"}],"error":[],"query_time":0.002593994140625,"total_time":0.00826406478881836}} cost 0.12612986564636  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(3) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "wms"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.002593994140625)
+    ["total_time"]=>
+    float(0.00826406478881836)
+  }
+}
+show databases
+2022-06-23 16:12:27[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"50\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsanalyze"},{"Database":"omsbase"},{"Database":"omscrm"},{"Database":"omscustomer"},{"Database":"omsencrypt"},{"Database":"omsfinance"},{"Database":"omsjob"},{"Database":"omsreport"},{"Database":"omssupply"},{"Database":"openapi"},{"Database":"wmsclient"},{"Database":"wmsroute"}],"error":[],"query_time":0.051917076110839844,"total_time":0.15671992301940918}} cost 0.26064586639404  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(15) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(11) "omscustomer"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [12]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+      [13]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [14]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.051917076110839844)
+    ["total_time"]=>
+    float(0.15671992301940918)
+  }
+}
+show databases
+2022-06-23 16:12:28[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"52\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"mysql"},{"Database":"oms"},{"Database":"omsanalyze"},{"Database":"omsbase"},{"Database":"omscrm"},{"Database":"omsencrypt"},{"Database":"omsfinance"},{"Database":"omsjob"},{"Database":"omsreport"},{"Database":"omssupply"},{"Database":"openapi"},{"Database":"performance_schema"},{"Database":"test"},{"Database":"wmsclient"},{"Database":"wmsroute"}],"error":[],"query_time":0.07368707656860352,"total_time":0.22048687934875488}} cost 0.59821105003357  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(16) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "oms"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsanalyze"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omsbase"
+      }
+      [5]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omscrm"
+      }
+      [6]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsencrypt"
+      }
+      [7]=>
+      array(1) {
+        ["Database"]=>
+        string(10) "omsfinance"
+      }
+      [8]=>
+      array(1) {
+        ["Database"]=>
+        string(6) "omsjob"
+      }
+      [9]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omsreport"
+      }
+      [10]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "omssupply"
+      }
+      [11]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "openapi"
+      }
+      [12]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "performance_schema"
+      }
+      [13]=>
+      array(1) {
+        ["Database"]=>
+        string(4) "test"
+      }
+      [14]=>
+      array(1) {
+        ["Database"]=>
+        string(9) "wmsclient"
+      }
+      [15]=>
+      array(1) {
+        ["Database"]=>
+        string(8) "wmsroute"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.07368707656860352)
+    ["total_time"]=>
+    float(0.22048687934875488)
+  }
+}
+show databases
+2022-06-23 16:12:28[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"53\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"fairjob"},{"Database":"mysql"},{"Database":"omssync"},{"Database":"xxl-job"}],"error":[],"query_time":0.07862496376037598,"total_time":0.22908306121826172}} cost 0.37692904472351  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(5) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "fairjob"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "omssync"
+      }
+      [4]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "xxl-job"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.07862496376037598)
+    ["total_time"]=>
+    float(0.22908306121826172)
+  }
+}
+show databases
+2022-06-23 16:12:29[][LeqeeDbService][error] url https://databasehub.guanyc.cn/api/QuickQueryController/syncExecute,data"{\"database_id\":\"54\",\"token\":\"44eafbc2fe25cf000caabe982b01b90262b3c55e7486b\",\"sql\":\"show databases\"}",response:{"code":"OK","data":{"done":true,"data":[{"Database":"information_schema"},{"Database":"express"},{"Database":"mysql"},{"Database":"wms"}],"error":[],"query_time":0.07233309745788574,"total_time":0.21900081634521484}} cost 0.50640392303467  
+array(2) {
+  ["code"]=>
+  string(2) "OK"
+  ["data"]=>
+  array(5) {
+    ["done"]=>
+    bool(true)
+    ["data"]=>
+    array(4) {
+      [0]=>
+      array(1) {
+        ["Database"]=>
+        string(18) "information_schema"
+      }
+      [1]=>
+      array(1) {
+        ["Database"]=>
+        string(7) "express"
+      }
+      [2]=>
+      array(1) {
+        ["Database"]=>
+        string(5) "mysql"
+      }
+      [3]=>
+      array(1) {
+        ["Database"]=>
+        string(3) "wms"
+      }
+    }
+    ["error"]=>
+    array(0) {
+    }
+    ["query_time"]=>
+    float(0.07233309745788574)
+    ["total_time"]=>
+    float(0.21900081634521484)
+  }
+}
