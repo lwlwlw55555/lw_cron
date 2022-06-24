@@ -58,11 +58,11 @@ class LeqeeDbService
         // echo $sql.PHP_EOL;die;
         // var_dump($db);die;
         $params = ['database_id'=>strval($db['databaseId']),'token'=>LeqeeDbService::getSystemToken($db['db']),'sql'=>$sql];
-        echo $sql.PHP_EOL;
+        // echo $sql.PHP_EOL;
         // var_dump($params);die;
 
         $res = LeqeeDbService::postJsonData($url.'/syncExecute',json_encode($params));
-        // var_export($res);die;
+        // var_export($res);
         return $res['data']['data'];
     }
 
@@ -98,7 +98,18 @@ class LeqeeDbService
         $need_dbs = [];
         $dbs = LeqeeDbService::getLeqeeDbs();
         foreach ($dbs as $key => $db) {
-            if (strpos($key, $strpos) || strpos($key, strtoupper($strpos))) {
+            if (strpos($key, $strpos) || strpos($key, strtoupper($strpos)) || $key == $strpos) {
+                $need_dbs[$key] = $db;
+            }
+        }
+        return $need_dbs;
+    }
+
+    public static function getStropsDbsGroup($group){
+        $need_dbs = [];
+        $dbs = LeqeeDbService::getLeqeeDbs();
+        foreach ($dbs as $key => $db) {
+            if (in_array($key, $group)) {
                 $need_dbs[$key] = $db;
             }
         }
