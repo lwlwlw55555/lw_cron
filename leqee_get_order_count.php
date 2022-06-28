@@ -59,6 +59,21 @@ $sql = "select count(1) as c from oms.origin_order
 if (isset($_REQUEST['shop_id']) && !empty($_REQUEST['shop_id'])) {
 	$sql .= "and shop_id = '{$_REQUEST['shop_id']}'";
 }
+$origin_count = 0;
+foreach ($oms_dbs as $oms_db) {
+	$res = LeqeeDbService::query($oms_db,$sql);
+	// echo $sql.PHP_EOL;
+	// var_dump($res);
+	$origin_count+=$res[0]['c'];
+}
+
+
+$sql = "select count(1) as c from oms.order_info oi inner join oms.shop s on oi.shop_id = s.shop_id
+        where
+         and s.platform = 'TAOBAO' and oi.last_update_time >= '{$_REQUEST['start_date']}' and oi.last_update_time < '{$_REQUEST['end_date']}' and oi.create_time >= '{$_REQUEST['start_date']}' and oi.create_time < '{$_REQUEST['end_date']}'";
+if (isset($_REQUEST['shop_id']) && !empty($_REQUEST['shop_id'])) {
+	$sql .= "and oi.shop_id = '{$_REQUEST['shop_id']}'";
+}
 $oms_count = 0;
 foreach ($oms_dbs as $oms_db) {
 	$res = LeqeeDbService::query($oms_db,$sql);
@@ -67,7 +82,7 @@ foreach ($oms_dbs as $oms_db) {
 	$oms_count+=$res[0]['c'];
 }
 
-echo json_encode(['code'=>0,'data'=>['sync_count'=>$sync_count,'oms_count'=>$oms_count]]);
+echo json_encode(['code'=>0,'data'=>['sync'=>$sync_count,'origin'=>$origin_count,'oms'=>$oms_count]]);
 return;
 
 
