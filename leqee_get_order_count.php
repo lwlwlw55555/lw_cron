@@ -20,6 +20,8 @@ use Services\LeqeeDbService;
 
 // $_REQUEST['start_date'] = '2022-06-24 15:00:40';
 // $_REQUEST['end_date'] = '2022-06-24 15:06:40';
+// $_REQUEST['topN'] = 5;
+
 
 if (empty($_REQUEST) || !array_key_exists('start_date', $_REQUEST) || !array_key_exists('end_date', $_REQUEST)) {
 	echo json_encode(['code'=>1,'data'=>'error params']);
@@ -28,11 +30,56 @@ if (empty($_REQUEST) || !array_key_exists('start_date', $_REQUEST) || !array_key
 }
 
 
-            
-
 $oms_dbs = LeqeeDbService::getStropsDbsGroup(['oms-polar','oms-mz-polar-prod','oms-v2-mz2-polar','oms-kx-polar-prod']);
 
 $sync_dbs = LeqeeDbService::getStropsDbs('oms_v2_sync');
+
+if (array_key_exists('topN', $_REQUEST) && !empty($_REQUEST['topN'])) {
+
+	$topN = $_REQUEST['topN'];
+
+	$sync_res = [];
+	$sql = "select count(1) count,shop_nick as shopNick from omssync.sync_order_info
+        where last_update_time >= '{$_REQUEST['start_date']}' and last_update_time < '{$_REQUEST['end_date']}' and api_platform = 'TAOBAO' and create_time >= '{$_REQUEST['start_date']}' and create_time  <'{$_REQUEST['end_date']}'
+        group by shopNick order by count desc limit {$topN}";
+
+    foreach ($sync_dbs as $sync_db) {
+		$res = LeqeeDbService::query($sync_db,$sql);
+		// var_dump($res);
+		$sync_res = array_merge($sync_res,$res);
+		// $sync_count+=$res[0]['c'];
+	}
+
+	$origin_res = [];
+    $sql = "select count(1) count,shop_nick as shopNick from
+            oms.origin_order oo inner join oms.shop s on oo.shop_id = s.shop_id
+        where oo.platform = 'TAOBAO' and oo.last_update_time >='{$_REQUEST['start_date']}' and oo.last_update_time < '{$_REQUEST['end_date']}' and oo.create_time >='{$_REQUEST['start_date']}' and oo.create_time < '{$_REQUEST['end_date']}'
+        group by shopNick order by count desc limit {$topN}";
+    foreach ($oms_dbs as $oms_db) {
+		$res = LeqeeDbService::query($oms_db,$sql);
+		// var_dump($res);
+		$origin_res = array_merge($origin_res,$res);
+		// $origin_count+=$res[0]['c'];
+	}
+
+
+	$oms_res = [];
+    $sql = "select count(1) count,shop_nick as shopNick from
+            oms.order_info oi inner join oms.shop s on oi.shop_id = s.shop_id
+        where s.platform = 'TAOBAO' and oi.last_update_time >= '{$_REQUEST['start_date']}' and oi.last_update_time < '{$_REQUEST['end_date']}' and oi.create_time >= '{$_REQUEST['start_date']}' and oi.create_time < '{$_REQUEST['end_date']}'
+        group by shopNick order by count desc limit {$topN}";
+	foreach ($oms_dbs as $oms_db) {
+		$res = LeqeeDbService::query($oms_db,$sql);
+		// var_dump($res);
+		$oms_res = array_merge($oms_res,$res);
+		// $origin_count+=$res[0]['c'];
+	}
+
+	echo json_encode(['code'=>0,'data'=>['sync'=>sortLeqeeTopN($sync_res,$topN),'origin'=>sortLeqeeTopN($origin_res,$topN),'oms'=>sortLeqeeTopN($oms_res,$topN)]]);
+	// echo json_encode(['code'=>0,'data'=>['sync'=>$sync_res,'origin'=>$origin_res,'oms'=>$oms_res]]);
+	return;
+}
+
 
 
 // var_dump($sync_dbs);
@@ -84,6 +131,31 @@ echo json_encode(['code'=>0,'data'=>['sync'=>$sync_count,'origin'=>$origin_count
 return;
 
 
+function sortLeqeeTopN($topN_arr,$limit=null){
+	// $num_count = array_column($data,'num_count');//返回数组中指定的一列
+	// array_multisort($num_count,SORT_DESC,$data);//对多个数组或多维数组进行排序
+	// var_dump($topN_arr);
+	$num_count = array_column($topN_arr,'count');
+	// var_dump($num_count);
+	 array_multisort($num_count,SORT_DESC,$topN_arr);
+	// var_dump($topN_arr);
+
+	 $topN_arr = array_values($topN_arr);
+	 // var_dump($topN_arr);
+	 if (!empty($limit)) {
+	 	$count = count($topN_arr);
+	 	for ($i=$limit;$i<$count;$i++) {
+	 		unset($topN_arr[$i]);
+	 	}
+	 }
+	 
+	 return $topN_arr;
+}
+
+
 // {"oms-polar":{"db":"leqee","databaseId":"21","databaseName":"oms-polar"},"oms_v2_main_slave_2":{"db":"leqee","databaseId":"22","databaseName":"oms_v2_main_slave_2"},"oms_v2_sync":{"db":"leqee","databaseId":"23","databaseName":"oms_v2_sync"},"oms-v2-xxl-job":{"db":"leqee","databaseId":"36","databaseName":"oms-v2-xxl-job"},"oms_v2_pressure_test":{"db":"leqee","databaseId":"45","databaseName":"oms_v2_pressure_test"},"oms-v2-wmsroute-prod":{"db":"leqee","databaseId":"52","databaseName":"oms-v2-wmsroute-prod"},"oms-v2-analyze-prod":{"db":"leqee","databaseId":"55","databaseName":"oms-v2-analyze-prod"},"oms-v2-main-slave-big":{"db":"leqee","databaseId":"56","databaseName":"oms-v2-main-slave-big"},"oms-v2-scm-prod":{"db":"leqee","databaseId":"57","databaseName":"oms-v2-scm-prod"},"oms-v2-shop-prod":{"db":"leqee","databaseId":"58","databaseName":"oms-v2-shop-prod"},"oms-v2-pt":{"db":"leqee","databaseId":"64","databaseName":"oms-v2-pt"},"oms_v2_preprod":{"db":"leqee","databaseId":"66","databaseName":"oms_v2_preprod"},"omsbase-prod":{"db":"leqee","databaseId":"77","databaseName":"omsbase-prod"},"oms-v2-test-3":{"db":"leqee","databaseId":"80","databaseName":"oms-v2-test-3"},"oms-kx-polar-prod":{"db":"leqee","databaseId":"81","databaseName":"oms-kx-polar-prod"},"oms-mz-polar-prod":{"db":"leqee","databaseId":"82","databaseName":"oms-mz-polar-prod"},"oms-kx-analyze-prod":{"db":"leqee","databaseId":"83","databaseName":"oms-kx-analyze-prod"},"oms-mz-analyze-prod":{"db":"leqee","databaseId":"84","databaseName":"oms-mz-analyze-prod"},"oms-kx-xxl-prod":{"db":"leqee","databaseId":"85","databaseName":"oms-kx-xxl-prod"},"oms-mz-xxl-prod":{"db":"leqee","databaseId":"86","databaseName":"oms-mz-xxl-prod"},"oms-v2-mz2-polar":{"db":"leqee","databaseId":"90","databaseName":"oms-v2-mz2-polar"},"oms-mz2-xxl-prod":{"db":"leqee","databaseId":"91","databaseName":"oms-mz2-xxl-prod"},"oms-mz2-analyze-prod":{"db":"leqee","databaseId":"93","databaseName":"oms-mz2-analyze-prod"},"oms-common-prod":{"db":"leqee","databaseId":"97","databaseName":"oms-common-prod"},"oms-kx-adb3":{"db":"leqee","databaseId":"100","databaseName":"oms-kx-adb3"},"oms-mz-adb3":{"db":"leqee","databaseId":"101","databaseName":"oms-mz-adb3"},"oms-mz2-adb3":{"db":"leqee","databaseId":"102","databaseName":"oms-mz2-adb3"},"pim-shop-prod":{"db":"leqee","databaseId":"104","databaseName":"pim-shop-prod"},"gyc-rds-1":{"db":"gyc","databaseId":"2","databaseName":"gyc-rds-1"},"gyc-oms-1":{"db":"gyc","databaseId":"5","databaseName":"gyc-oms-1"},"gyc-oms-sync-1":{"db":"gyc","databaseId":"6","databaseName":"gyc-oms-sync-1"},"gyc-oms-open-1":{"db":"gyc","databaseId":"7","databaseName":"gyc-oms-open-1"},"gyc-oms-xxl-job":{"db":"gyc","databaseId":"17","databaseName":"gyc-oms-xxl-job"},"gyc-oms-adb":{"db":"gyc","databaseId":"21","databaseName":"gyc-oms-adb"},"PerfectDiary-OMS":{"db":"gyc","databaseId":"22","databaseName":"PerfectDiary-OMS"},"PerfectDiary-Yiran-XXL-Job":{"db":"gyc","databaseId":"31","databaseName":"PerfectDiary-Yiran-XXL-Job"},"PerfectDiary-Yiran-OMS-Slave":{"db":"gyc","databaseId":"32","databaseName":"PerfectDiary-Yiran-OMS-Slave"},"PerfectDiary-Yiran-OMS":{"db":"gyc","databaseId":"33","databaseName":"PerfectDiary-Yiran-OMS"},"PerfectDiary-Yiran-OMS-Sync":{"db":"gyc","databaseId":"34","databaseName":"PerfectDiary-Yiran-OMS-Sync"},"gyc-oms-analyze-prod":{"db":"gyc","databaseId":"35","databaseName":"gyc-oms-analyze-prod"},"gyc-oms-1-slave":{"db":"gyc","databaseId":"36","databaseName":"gyc-oms-1-slave"},"ruyun-oms-xxl-job":{"db":"gyc","databaseId":"38","databaseName":"ruyun-oms-xxl-job"},"ruyun-oms-sync":{"db":"gyc","databaseId":"40","databaseName":"ruyun-oms-sync"},"ruyun-oms":{"db":"gyc","databaseId":"41","databaseName":"ruyun-oms"},"gyc-oms-test":{"db":"gyc","databaseId":"47","databaseName":"gyc-oms-test"},"wms-lite-express-prod":{"db":"gyc","databaseId":"48","databaseName":"wms-lite-express-prod"},"wms-lite-prod":{"db":"gyc","databaseId":"49","databaseName":"wms-lite-prod"},"ruyun-slave-oms":{"db":"gyc","databaseId":"50","databaseName":"ruyun-slave-oms"},"CTF-OMS":{"db":"gyc","databaseId":"52","databaseName":"CTF-OMS"},"CTF-OMS-SYNC":{"db":"gyc","databaseId":"53","databaseName":"CTF-OMS-SYNC"},"ctf-wms-lite-express":{"db":"gyc","databaseId":"54","databaseName":"ctf-wms-lite-express"}}
 
 // echo json_encode($dbs);
+
+
+
