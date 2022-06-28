@@ -62,8 +62,6 @@ if (isset($_REQUEST['shop_id']) && !empty($_REQUEST['shop_id'])) {
 $origin_count = 0;
 foreach ($oms_dbs as $oms_db) {
 	$res = LeqeeDbService::query($oms_db,$sql);
-	// echo $sql.PHP_EOL;
-	// var_dump($res);
 	$origin_count+=$res[0]['c'];
 }
 
@@ -77,8 +75,6 @@ if (isset($_REQUEST['shop_id']) && !empty($_REQUEST['shop_id'])) {
 $oms_count = 0;
 foreach ($oms_dbs as $oms_db) {
 	$res = LeqeeDbService::query($oms_db,$sql);
-	// echo $sql.PHP_EOL;
-	// var_dump($res);
 	$oms_count+=$res[0]['c'];
 }
 
