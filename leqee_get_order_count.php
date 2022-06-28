@@ -68,13 +68,15 @@ foreach ($oms_dbs as $oms_db) {
 
 $sql = "select count(1) as c from oms.order_info oi inner join oms.shop s on oi.shop_id = s.shop_id
         where
-         and s.platform = 'TAOBAO' and oi.last_update_time >= '{$_REQUEST['start_date']}' and oi.last_update_time < '{$_REQUEST['end_date']}' and oi.create_time >= '{$_REQUEST['start_date']}' and oi.create_time < '{$_REQUEST['end_date']}'";
+          s.platform = 'TAOBAO' and oi.last_update_time >= '{$_REQUEST['start_date']}' and oi.last_update_time < '{$_REQUEST['end_date']}' and oi.create_time >= '{$_REQUEST['start_date']}' and oi.create_time < '{$_REQUEST['end_date']}'";
 if (isset($_REQUEST['shop_id']) && !empty($_REQUEST['shop_id'])) {
 	$sql .= "and oi.shop_id = '{$_REQUEST['shop_id']}'";
 }
+// var_dump($sql);
 $oms_count = 0;
 foreach ($oms_dbs as $oms_db) {
 	$res = LeqeeDbService::query($oms_db,$sql);
+	// var_dump($res);
 	$oms_count+=$res[0]['c'];
 }
 
