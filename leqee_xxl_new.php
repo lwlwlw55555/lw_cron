@@ -52,7 +52,7 @@ if (empty($dbs)) {
 }
 
 $db_type = '';
-$dbs = ['leqee'=>['oms-v2-xxl-job', 'oms-kx-xxl-prod', 'oms-mz-xxl-prod', 'oms-mz2-xxl-prod'],'gyc'=>['gyc-oms-xxl-job', 'PerfectDiary-Yiran-XXL-Job', 'ruyun-oms-xxl-job']];
+$db_mappings = ['leqee'=>['oms-v2-xxl-job', 'oms-kx-xxl-prod', 'oms-mz-xxl-prod', 'oms-mz2-xxl-prod'],'gyc'=>['gyc-oms-xxl-job', 'PerfectDiary-Yiran-XXL-Job', 'ruyun-oms-xxl-job']];
 if (!empty($_REQUEST) && array_key_exists('db_type', $_REQUEST) && in_array($_REQUEST['db_type'], ['leqee','gyc'])) {
     $db_type = $_REQUEST['db_type'];
 }
@@ -63,7 +63,7 @@ foreach ($dbs as $key => $value) {
         // $pre = '------'.$key.'------';
         // echo $pre.PHP_EOL;
         if (!empty($db_type)) {
-            if (!in_array($key, $dbs[$db_type])) {
+            if (!in_array($key, $db_mappings[$db_type])) {
                 continue;
             }
         }
