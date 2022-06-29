@@ -76,7 +76,7 @@ function getXxlAttachmentOut($data){
     header('Content-Disposition: attachment;filename='.$file_name.'.xlsx');
     header('filename: '.$file_name.'.xlsx');
     header('Cache-Control: max-age=0');
-    header('Access-Control-Expose-Headers: filename,Content-Disposition')
+    header('Access-Control-Expose-Headers: filename,Content-Disposition');
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel2007');
     $objWriter->save('php://output');
     exit();
