@@ -7,13 +7,7 @@ require(ROOT_PATH . "includes/erp_report/erp_report_function.php");
 $token_leqee = "6502b6ab3ff6297121d02efbcf0c851062143be28e17d";
 $token_gyc = "38c846cc6369ab8cb33baebed2f6c3a862143da9e6bf2";
 
-if (!empty($argv[1])) {
-    $token_leqee = $argv[1];   
-}
 
-if (!empty($argv[2])) {
-    $token_gyc =  $argv[2];   
-}
 
 global $db;
 
@@ -57,13 +51,22 @@ if (empty($dbs)) {
     $dbs = getDatabaseList();
 }
 
-// var_dump($dbs);
+$db_type = '';
+$dbs = ['leqee'=>['oms-v2-xxl-job', 'oms-kx-xxl-prod', 'oms-mz-xxl-prod', 'oms-mz2-xxl-prod'],'gyc'=>['gyc-oms-xxl-job', 'PerfectDiary-Yiran-XXL-Job', 'ruyun-oms-xxl-job']];
+if (!empty($_REQUEST) && array_key_exists('db_type', $_REQUEST) && in_array($_REQUEST['db_type'], ['leqee','gyc'])) {
+    $db_type = $_REQUEST['db_type'];
+}
 
 $result = [];
 foreach ($dbs as $key => $value) {
     if (strpos($key, 'xxl') || strpos($key, 'XXL')) {
         // $pre = '------'.$key.'------';
         // echo $pre.PHP_EOL;
+        if (!empty($db_type)) {
+            if (!in_array($key, $dbs[$db_type])) {
+                continue;
+            }
+        }
         $url = $value['db']=='leqee'?$url_leqee:$url_gyc;
         $token = $value['db']=='leqee'?$token_leqee:$token_gyc;
         // var_dump($value);
