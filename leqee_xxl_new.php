@@ -35,7 +35,6 @@ global $url_leqee,$url_gyc,$token_leqee,$token_gyc;
 
 require("Services/ExpressApiService.php");
 use Services\ExpressApiService;
-echo date("Y-m-d H:i:s").PHP_EOL;
 
 $sql = "select g.*, max(handle_time) handle_time
 from `xxl-job`.xxl_job_qrtz_trigger_group g 
