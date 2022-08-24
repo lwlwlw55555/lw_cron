@@ -10,25 +10,24 @@ include 'request/OrderNumberListGetRequest.php';
 include 'PddClient.php';
 
 $lw_conf = array(
-    // "host" => "127.0.0.1:3306",
-    "host" => "121.40.113.153:3306",
+    "host" => "127.0.0.1:3306",
+    // "host" => "121.40.113.153:3306",
     "user" => "root",
-    "pass" => "123456",
+    // "pass" => "123456",
     "charset" => "utf8",
     "pconnect" => "1",
-    // "name" => "omssync"
-    "name" => "omssync"
+    // "name" => "sys_info"
+    "name" => "leqee_sys_info"
 );
 $lw_db = ClsPdo::getInstance($lw_conf);
 
 $omssync_db_conf = array(
-    "host" => "rm-bp10hv462sva1muzk5o.mysql.rds.aliyuncs.com:3306",
-    "user" => "admin_omsv2",
-    "pass" => "7o%01XSpZPE%",
+    "host" => "rm-bp1igiu97gc79oc5yo.mysql.rds.aliyuncs.com:3306",
+    "user" => "oms",
+    "pass" => "cNlFy%MtcoQR",
     "charset" => "utf8",
     "pconnect" => "1",
-    // "name" => "omssync"
-     "name" => "omssync"
+    "name" => "sys_info"
 );
 $omssync_db = ClsPdo::getInstance($omssync_db_conf);
 
@@ -40,16 +39,18 @@ foreach ($tables as $table) {
         try{
             $sql = "show create table `{$v}`";
             $t = $omssync_db->getAll($sql);
-            var_dump($t[0]['Create Table']);
-            $sql = $t[0]['Create Table'];
-           $lw_db->query($sql);
+            if (isset($t[0]['Create Table'])) {
+                var_dump($t[0]['Create Table']);
+                $sql = $t[0]['Create Table'];
+                $lw_db->query($sql);
+            }
         }catch(Exception $e){
             if (strpos($e->getMessage(), 'already exists') == false) {
                 // echo $e->getMessage(); die;
             }
             // echo $e->getMessage(); echo PHP_EOL;
         }
-        // $sql = "SELECT auto_increment FROM information_schema.tables where table_schema='omssync' and table_name='{$v}'";
+        // $sql = "SELECT auto_increment FROM information_schema.tables where table_schema='sys_info' and table_name='{$v}'";
         // var_dump($sql);
         // $num = $lw_db->getOne($sql);
         // var_dump($num);

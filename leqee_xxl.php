@@ -62,7 +62,7 @@ if (empty($dbs)) {
 
 $result = [];
 foreach ($dbs as $key => $value) {
-    if (strpos($key, 'xxl') || strpos($key, 'XXL')) {
+    if (strpos($key, 'xxl') || strpos($key, 'XXL') || $key === 'CTF-OMS-SYNC') {
         // $pre = '------'.$key.'------';
         // echo $pre.PHP_EOL;
         $url = $value['db']=='leqee'?$url_leqee:$url_gyc;
