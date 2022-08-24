@@ -50,7 +50,9 @@ group by g.id";
 
 $sql_db = "select db,database_id as databaseId,database_name as databaseName from leqee_tables where database_name like '%xxl%'
 union
-select db,database_id as databaseId,database_name as databaseName from leqee_tables where database_name like '%XXL%';";
+select db,database_id as databaseId,database_name as databaseName from leqee_tables where database_name like '%XXL%'
+union
+select db,database_id as databaseId,database_name as databaseName from leqee_tables where database_name = 'CTF-OMS-SYNC'";
 $dbs = refreshArraytoMapping($db->getAll($sql_db),'databaseName');
 // var_export($dbs);
 
