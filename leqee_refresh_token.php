@@ -25,9 +25,9 @@ if (!isset($_REQUEST['leqee_token']) || !isset($_REQUEST['gyc_token'])) {
 	$config_value = $db->getOne("select config_value from common_config where config_key = 'TOKEN_MAPPING'");
 	$config_arr = json_decode($config_value,true);
 	if (!isset($_REQUEST['leqee_token'])) {
-		$_REQUEST['leqee_token'] = isset($config_arr['leqee_token'])?$config_arr['leqee_token']:'';
+		$_REQUEST['leqee_token'] = isset($config_arr['leqee'])?$config_arr['leqee']:'';
 	}else{
-		$_REQUEST['gyc_token'] = isset($config_arr['gyc_token'])?$config_arr['gyc_token']:'';
+		$_REQUEST['gyc_token'] = isset($config_arr['gyc'])?$config_arr['gyc']:'';
 	}
 }
 
