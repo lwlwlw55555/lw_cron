@@ -9,20 +9,20 @@ $lw_conf = array(
     // "pass" => "123456",
     "charset" => "utf8",
     "pconnect" => "1",
-    // "name" => "bi_origin"
-    "name" => "bi_origin"
+    // "name" => "oms"
+    "name" => "oms"
 );
 $to_conf = $lw_conf;
 global $to_conf;
 $lw_db = ClsPdo::getInstance($lw_conf);
 
 $oms_db_conf = array(
-    "host" => "rm-bp1kxg882g197xnnvxo.mysql.rds.aliyuncs.com:3306",
-    "user" => "bi",
-    "pass" => "5*8Vnm&uTEF4",
+    "host" => "rm-bp10hv462sva1muzk5o.mysql.rds.aliyuncs.com:3306",
+    "user" => "admin_omsv2",
+    "pass" => "7o%01XSpZPE%",
     "charset" => "utf8",
     "pconnect" => "1",
-    "name" => "bi_origin"
+    "name" => "oms"
 );
 $from_conf = $oms_db_conf;
 global $from_conf;
@@ -32,7 +32,7 @@ moveDataByPartyId($oms_db,$lw_db);
 
 function moveDataByPartyId($oms_db,$lw_db){
     
-    $sql = "select distinct TABLE_NAME from information_schema.COLUMNS  where TABLE_SCHEMA = 'bi_origin'";
+    $sql = "select distinct TABLE_NAME from information_schema.COLUMNS  where TABLE_SCHEMA = 'oms'";
     $tables = $oms_db->getCol($sql);
     var_dump($tables);
 
@@ -40,9 +40,9 @@ function moveDataByPartyId($oms_db,$lw_db){
 
     $is_ok = false;
     foreach ($tables as $table){
-        // if (!$is_ok && $table !== 'jd_category_info') {
-        //     continue;
-        // }
+        if (!$is_ok && $table !== 'shop') {
+            continue;
+        }
         $is_ok = true;
         moveData($oms_db,$lw_db,$table);
     }
@@ -56,7 +56,7 @@ function moveData($from_db,$to_db,$table){
     global $from_conf,$to_conf;
     $primay_key = null;
     if(empty($columns)){
-        $columns_infos = execRetry($from_db, $from_conf, "show COLUMNS from bi_origin.{$table}", 'getAll');
+        $columns_infos = execRetry($from_db, $from_conf, "show COLUMNS from oms.{$table}", 'getAll');
         foreach ($columns_infos as $columns_info) {
             $column = $columns_info['Field'];
             $columns[] = $column;
