@@ -3,6 +3,8 @@
 define('ROOT_PATH', str_replace('includes/init.php', '', str_replace('\\', '/', __FILE__)));
 $ROOT_PATH = ROOT_PATH;
 date_default_timezone_set("Asia/Shanghai");
+
+ini_set("display_errors", 0);
 error_reporting(E_ALL ^ E_NOTICE);
 
 error_reporting(E_ALL ^ E_WARNING);
