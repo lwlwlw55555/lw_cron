@@ -3,6 +3,9 @@
 define('ROOT_PATH', str_replace('includes/init.php', '', str_replace('\\', '/', __FILE__)));
 $ROOT_PATH = ROOT_PATH;
 date_default_timezone_set("Asia/Shanghai");
+error_reporting(E_ALL ^ E_NOTICE);
+
+error_reporting(E_ALL ^ E_WARNING);
 
 require(ROOT_PATH . 'config/master_config.php');
 require(ROOT_PATH . "includes/cls_mysql.php");
