@@ -60,8 +60,12 @@ $dbs = getDatabaseList();
 $result = [];
 foreach ($dbs as $key => $value) {
     if (strpos($key, 'xxl') || strpos($key, 'XXL')) {
+        if ($key == 'cosmos-xxl-job') {
+            continue;
+        }
         // $pre = '------'.$key.'------';
         // echo $pre.PHP_EOL;
+
         $url = $value['db']=='leqee'?$url_leqee:$url_gyc;
         $token = $value['db']=='leqee'?$token_leqee:$token_gyc;
         // var_dump($token);
