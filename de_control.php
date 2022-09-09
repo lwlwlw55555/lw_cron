@@ -13,7 +13,7 @@ if (isset($_REQUEST['control_status']) && !empty($_REQUEST['control_status'])) {
 	return;
 }else{
 	$status = $redis->get('Onlinestatus');
-	echo json_encode(['code'=>0,'data'=>['control_status'=>$status]);
+	echo json_encode(['code'=>0,'data'=>['control_status'=>$status]]);
 	return;
 }
 
