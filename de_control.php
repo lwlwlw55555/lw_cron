@@ -9,7 +9,7 @@ $redis = getRedis();
 
 if (isset($_REQUEST['control_status']) && !empty($_REQUEST['control_status'])) {
 	$redis->set('Onlinestatus',$_REQUEST['control_status']);
-	echo json_encode(['code'=>0,'data'=>'');
+	echo json_encode(['code'=>0,'data'=>'']);
 	return;
 }else{
 	$status = $redis->get('Onlinestatus');
