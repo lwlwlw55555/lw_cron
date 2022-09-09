@@ -1,11 +1,6 @@
 <?php
 require("includes/init.php");
-require(ROOT_PATH . "includes/erp_report/erp_report_function.php");
-
-require("Services/LeqeeDbService.php");
-use Services\LeqeeDbService;
-
-$redis = getRedis();
+$redis = getDeRedis();
 
 if (isset($_REQUEST['control_status']) && !empty($_REQUEST['control_status'])) {
 	$redis->set('Onlinestatus',$_REQUEST['control_status']);
@@ -18,7 +13,7 @@ if (isset($_REQUEST['control_status']) && !empty($_REQUEST['control_status'])) {
 }
 
 
-function getRedis() {
+function getDeRedis() {
     global $redis_config;
     require_once 'includes/predis-1.1/autoload.php';
     $redis = new Predis\Client([
