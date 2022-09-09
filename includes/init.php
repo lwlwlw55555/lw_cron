@@ -4,10 +4,12 @@ define('ROOT_PATH', str_replace('includes/init.php', '', str_replace('\\', '/', 
 $ROOT_PATH = ROOT_PATH;
 date_default_timezone_set("Asia/Shanghai");
 
-ini_set("display_errors", 0);
-error_reporting(E_ALL ^ E_NOTICE);
+// ini_set("display_warning", 0);
+// error_reporting(E_ALL & ~E_NOTICE);
 
-error_reporting(E_ALL ^ E_WARNING);
+// error_reporting(E_ALL & ~E_WARNING);
+//仅显示错误 去掉notice
+error_reporting(E_COMPILE_ERROR|E_RECOVERABLE_ERROR|E_ERROR|E_CORE_ERROR);
 
 require(ROOT_PATH . 'config/master_config.php');
 require(ROOT_PATH . "includes/cls_mysql.php");
