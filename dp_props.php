@@ -5,11 +5,11 @@ $redis = getDpRedis();
 if ((isset($_REQUEST['BI-EB-URL']) && !empty($_REQUEST['BI-EB-URL'])) 
     || (isset($_REQUEST['BI-EB-URL']) && !empty($_REQUEST['BI-DB-URL']))) {
 
-	if (!empty($_REQUEST['BI-EB-URL']) {
+	if (!empty($_REQUEST['BI-EB-URL'])) {
         $redis->set('BI-EB-URL',$_REQUEST['BI-EB-URL']);
     }
 
-    if (!empty($_REQUEST['BI-DB-URL']) {
+    if (!empty($_REQUEST['BI-DB-URL'])) {
         $redis->set('BI-DB-URL',$_REQUEST['BI-DB-URL']);
     }
 	echo json_encode(['code'=>0,'data'=>'']);
