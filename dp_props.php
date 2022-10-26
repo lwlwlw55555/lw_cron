@@ -2,6 +2,13 @@
 require("includes/init.php");
 $redis = getDpRedis();
 
+
+if (isset($_REQUEST['restart']) && $_REQUEST['restart']) {
+    curl_exec("service dp restart");
+    echo json_encode(['code'=>0,'data'=>'']);
+    return;
+}
+
 if ((isset($_REQUEST['BI-EB-URL']) && !empty($_REQUEST['BI-EB-URL'])) 
     || (isset($_REQUEST['BI-EB-URL']) && !empty($_REQUEST['BI-DB-URL']))) {
 
