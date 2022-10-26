@@ -4,7 +4,7 @@ $redis = getDpRedis();
 
 
 if (isset($_REQUEST['restart']) && $_REQUEST['restart']) {
-    curl_exec("service dp restart");
+    shell_exec("service dp restart");
     echo json_encode(['code'=>0,'data'=>'']);
     return;
 }
