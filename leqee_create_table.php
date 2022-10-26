@@ -16,19 +16,28 @@ $lw_conf = array(
     // "pass" => "123456",
     "charset" => "utf8",
     "pconnect" => "1",
-    // "name" => "sys_info"
-    "name" => "leqee_sys_info"
+    "name" => "bi"
+    // "name" => "leqee_sys_info"
 );
 $lw_db = ClsPdo::getInstance($lw_conf);
 
+// $omssync_db_conf = array(
+//     "host" => "rm-bp1igiu97gc79oc5yo.mysql.rds.aliyuncs.com:3306",
+//     "user" => "oms",
+//     "pass" => "cNlFy%MtcoQR",
+//     "charset" => "utf8",
+//     "pconnect" => "1",
+//     "name" => "sys_info"
+// );
 $omssync_db_conf = array(
-    "host" => "rm-bp1igiu97gc79oc5yo.mysql.rds.aliyuncs.com:3306",
-    "user" => "oms",
-    "pass" => "cNlFy%MtcoQR",
+    "host" => "rm-bp1kxg882g197xnnvxo.mysql.rds.aliyuncs.com:3306",
+    "user" => "bi",
+    "pass" => "5*8Vnm&uTEF4",
     "charset" => "utf8",
     "pconnect" => "1",
-    "name" => "sys_info"
+    "name" => "bi"
 );
+
 $omssync_db = ClsPdo::getInstance($omssync_db_conf);
 
 
