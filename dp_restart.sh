@@ -3,7 +3,14 @@ current=`date "+%Y-%m-%d %H:%M:%S"`
 echo $current 
 
 
-service dp restart
+service dp restart &
+
+
+# /usr/java/jdk1.8.0_311/bin/java -Xmx1024m -Xms512m -Xss256k -jar /opt/bi.jar 
+# ExecStop=/usr/bin/kill -15  $MAINPID
+
+# /usr/java/jdk1.8.0_311/bin/java -Xmx512m -Xms256m -Xss256k -jar /opt/bi.jar 
+
 # sudo su
 
 # #kill pre
