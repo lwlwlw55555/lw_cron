@@ -8,28 +8,28 @@ if (isset($_REQUEST['restart']) && $_REQUEST['restart']) {
     // shell_exec("lsof -i:8199 | awk '{print $2}' | grep -v PID | xargs kill -9");
     // shell_exec("nohup java -jar /opt/bi.jar &");
     // shell_exec("service dp restart");
-    shell_exec("sh dp_restart.sh");
-    echo json_encode(['code'=>0,'data'=>'']);
+    $out = shell_exec("sh dp_restart.sh");
+    echo json_encode(['code'=>0,'data'=>json_encode($out)]);
     return;
 }
 
 if ((isset($_REQUEST['BI-EB-URL']) && !empty($_REQUEST['BI-EB-URL'])) 
     || (isset($_REQUEST['BI-EB-URL']) && !empty($_REQUEST['BI-DB-URL']))) {
 
-	if (!empty($_REQUEST['BI-EB-URL'])) {
+    if (!empty($_REQUEST['BI-EB-URL'])) {
         $redis->set('BI-EB-URL',$_REQUEST['BI-EB-URL']);
     }
 
     if (!empty($_REQUEST['BI-DB-URL'])) {
         $redis->set('BI-DB-URL',$_REQUEST['BI-DB-URL']);
     }
-	echo json_encode(['code'=>0,'data'=>'']);
-	return;
+    echo json_encode(['code'=>0,'data'=>'']);
+    return;
 }else{
-	$db_url = $redis->get('BI-DB-URL');
+    $db_url = $redis->get('BI-DB-URL');
     $eb_uerl = $redis->get('BI-EB-URL');
-	echo json_encode(['code'=>0,'data'=>['BI-DB-URL'=>$db_url,'BI-EB-URL'=>$eb_uerl]]);
-	return;
+    echo json_encode(['code'=>0,'data'=>['BI-DB-URL'=>$db_url,'BI-EB-URL'=>$eb_uerl]]);
+    return;
 }
 
 
