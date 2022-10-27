@@ -7,7 +7,7 @@ echo 'begin kill 8199'
 
 # lsof -i:8199 | awk '{print $2}' | grep -v PID xargs kill -9
 
-thread=$(lsof -i:8199 | awk '{print $2}' | grep -v PID)
+thread=$(lsof -i:8018 | awk '{print $2}' | grep -v PID)
 echo $thread
 if [ $thread ]
 then
@@ -17,4 +17,5 @@ else
 fi
 
 
-nohup /usr/java/jdk1.8.0_311/bin/java -Xmx512m -Xms256m -Xss256k -jar /opt/bi.jar &
+# nohup /usr/java/jdk1.8.0_311/bin/java -Xmx512m -Xms256m -Xss256k -jar /opt/bi.jar &
+nohup /usr/java/jdk1.8.0_311/bin/java -Xmx512m -Xms256m -Xss256k -jar /opt/do_com_admin.jar &
