@@ -18,6 +18,8 @@ cp /Users/lw/Code/leqee/bi/bi/bi-servlet/target/bi-servlet-0.0.1-SNAPSHOT.jar ~/
 #kill pre
 echo 'begin kill 8085'
 
+# lsof -i:8199 | awk '{print $2}' | grep -v PID xargs kill -9
+
 thread=$(lsof -i:8085 | awk '{print $2}' | grep -v PID)
 echo $thread
 if [ $thread ]

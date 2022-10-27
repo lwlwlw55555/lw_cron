@@ -1,0 +1,15 @@
+cd C:\Users\wliu11\Desktop\nginx-1.22.1
+
+
+taskkill /f /t /im nginx.exe
+
+nginx -c conf/nginx.conf
+
+
+cd C:\Program Files\cpolar
+
+cpolar authtoken MzllODYwZmMtOWExNy00OWMyLTkwZDMtNmRkZDhiNmM2ZmQy
+
+cpolar http 80
+
+cpolar tcp 7072

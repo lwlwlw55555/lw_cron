@@ -3,8 +3,12 @@ require("includes/init.php");
 $redis = getDpRedis();
 
 
+// 下面注释的三句不能用 第一句没有8199会卡死 第二句可以跑但是因为第一句会卡主 第三局因为权限问题 通过nginx调用php是www用户 www用户执行不了service、systemctl系统服务!!!!!
 if (isset($_REQUEST['restart']) && $_REQUEST['restart']) {
-    shell_exec("service dp restart");
+    // shell_exec("lsof -i:8199 | awk '{print $2}' | grep -v PID | xargs kill -9");
+    // shell_exec("nohup java -jar /opt/bi.jar &");
+    // shell_exec("service dp restart");
+    shell_exec("sh dp_restart.sh");
     echo json_encode(['code'=>0,'data'=>'']);
     return;
 }
