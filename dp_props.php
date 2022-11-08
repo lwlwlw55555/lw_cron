@@ -13,6 +13,16 @@ if (isset($_REQUEST['restart']) && $_REQUEST['restart']) {
     return;
 }
 
+if (isset($_REQUEST['stop']) && $_REQUEST['stop']) {
+    // shell_exec("lsof -i:8199 | awk '{print $2}' | grep -v PID | xargs kill -9");
+    // shell_exec("nohup java -jar /opt/bi.jar &");
+    // shell_exec("service dp restart");
+    // $out = shell_exec("sh dp_restart.sh");
+    shell_exec("service dp stop");
+    echo json_encode(['code'=>0,'data'=>json_encode($out)]);
+    return;
+}
+
 if ((isset($_REQUEST['BI-EB-URL']) && !empty($_REQUEST['BI-EB-URL'])) 
     || (isset($_REQUEST['BI-EB-URL']) && !empty($_REQUEST['BI-DB-URL']))) {
 
