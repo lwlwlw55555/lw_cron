@@ -1,20 +1,43 @@
 <?php
 require("includes/init.php");
 
-$s = 'cn_table_name,
- en_table_name,
- source_table_name,
- source_table_id,
- source_col_name,
- source_col_id,
- mapping_num,
- create_user,
- create_time';
-$arr = explode(",", $s);
-var_dump($arr);
-foreach ($arr as $value) {
+$s = '{
+	"dataType":"",
+	"dataLength":0,
+	"dataPrecisionInt":0,
+	"dataPrecisionDec":0,
+	"hasNull":false,
+	"defaultValue":"",
+	"valueRange":"",
+	"enumTableIdList":[
+		0
+	],
+	"attrList":[
+		{
+			"id":0,
+			"dataUnitId":0,
+			"attrKey":"",
+			"attrValue":""
+		}
+	],
+	"id":0,
+	"cnName":"",
+	"enName":"",
+	"simpleEnName":"",
+	"createTime":"2022-11-22 11:03:01",
+	"createUser":0,
+	"updateTime":"2022-11-22 11:03:01",
+	"updateUser":0,
+	"nickName":"",
+	"busDefine":"",
+	"isOnline":false
+}';
+
+$arr = json_decode($s,true);
+// var_dump($arr);
+foreach ($arr as $key => $value) {
 	// camelize($value);
-	echo $value.' as '.camelize($value).',';
+	echo uncamelize($key).' as '.$key.','.PHP_EOL;
 }
 
 /**

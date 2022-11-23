@@ -34,11 +34,16 @@ $target_db = ClsPdo::getInstance($target_db_conf);
 
 $sql = "select distinct table_name
 from information_schema.COLUMNS
-where  TABLE_NAME like '%lee%' and TABLE_SCHEMA = 'bi'";
+where  TABLE_NAME like 'model%' and TABLE_SCHEMA = 'bi'";
 
 $tables = $target_db->getCol($sql);
 // $tables = $target_db->getAll("show tables");
-var_export($tables);
+// var_export($tables);
+echo '| 相关表      |'.PHP_EOL;
+echo '| -------------|'.PHP_EOL;
+foreach ($tables as $t) {
+    echo '| '.$t.' |'.PHP_EOL;
+}
 foreach ($tables as $table) {
     try{
         $sql = "show create table `{$table}`";
@@ -46,7 +51,7 @@ foreach ($tables as $table) {
         if (isset($t[0]['Create Table'])) {
             // var_dump($t[0]['Create Table']);
             $sql = $t[0]['Create Table'];
-            echo $sql.';'.PHP_EOL;
+            echo $sql.';'.PHP_EOL.PHP_EOL;
             // $lw_db->query($sql);
         }
     }catch(Exception $e){

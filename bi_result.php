@@ -1,15 +1,22 @@
 <?php
 require("includes/init.php");
 
-$s = '
-            {
-                "columnComment": "1 acsacasca",
-                "isUnique": 1,
-                "dataType": "文本",
-                "dataLength": 1123
-            }
+// $s = '
+//             {
+//                 "columnComment": "1 acsacasca",
+//                 "isUnique": 1,
+//                 "dataType": "文本",
+//                 "dataLength": 1123
+//             }
         
-    ';
+//     ';
+
+$s = ' {
+            "packageId": "1",
+            "packageName": "数据银行1(Databank-Shovel)",
+            "platformGroupCode": "DATABANK",
+            "platformCode": "DATABANK"
+        }';
 
 // | 参数名 | 类型   | 说明                                                         |
 // | :----- | :----- | ------------------------------------------------------------ |

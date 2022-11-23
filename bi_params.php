@@ -1,19 +1,26 @@
 <?php
 require("includes/init.php");
 
-$s = '{
-	"taskId":0,
-	"pathId":0,
-	"taskCode":0,
-	"taskDev":0,
-	"taskDevName":"",
-	"businessDomain":"",
-	"theme":"",
-	"timePeriodTrans":"",
-	"businessDimension":"",
-	"collateLogic":"",
-	"taskInfoType":"CRAWLER | ETL | DIMENSION | COLLECTION | SYNC | ACCESS | ETL_SUPPLEMENT | CRAWLER_SUPPLEMENT"
-}';
+// $s = '{
+// 	"taskId":0,
+// 	"pathId":0,
+// 	"taskCode":0,
+// 	"taskDev":0,
+// 	"taskDevName":"",
+// 	"businessDomain":"",
+// 	"theme":"",
+// 	"timePeriodTrans":"",
+// 	"businessDimension":"",
+// 	"collateLogic":"",
+// 	"taskInfoType":"CRAWLER | ETL | DIMENSION | COLLECTION | SYNC | ACCESS | ETL_SUPPLEMENT | CRAWLER_SUPPLEMENT"
+// }';
+
+$s = ' {
+            "packageId": "1",
+            "packageName": "数据银行1(Databank-Shovel)",
+            "platformGroupCode": "DATABANK",
+            "platformCode": "DATABANK"
+        }';
 
 // | 参数名 | 类型   | 说明                                                         |
 // | :----- | :----- | ------------------------------------------------------------ |
