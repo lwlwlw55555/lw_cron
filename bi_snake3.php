@@ -2,15 +2,16 @@
 require("includes/init.php");
 
 $s = '
+
+		{
+			"id":0,
+			"infoId":0,
+			"fixedValue":"",
+			"enumType":"",
+			"enumValue":"",
+			"orderIndex":0
+		}
 	
-	{
-	"id":0,
-	"enumTableId":0,
-	"enumText":"",
-	"enumValue":"",
-	"enumDesc":"",
-	"isEff":false
-}
 ';
 
 $arr = json_decode($s,true);

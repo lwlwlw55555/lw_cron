@@ -2,35 +2,16 @@
 require("includes/init.php");
 
 $s = '{
-	"dataType":"",
-	"dataLength":0,
-	"dataPrecisionInt":0,
-	"dataPrecisionDec":0,
-	"hasNull":false,
-	"defaultValue":"",
-	"valueRange":"",
-	"enumTableIdList":[
-		0
-	],
-	"attrList":[
-		{
-			"id":0,
-			"dataUnitId":0,
-			"attrKey":"",
-			"attrValue":""
-		}
-	],
+	"createUserName":"",
 	"id":0,
 	"cnName":"",
 	"enName":"",
 	"simpleEnName":"",
-	"createTime":"2022-11-22 11:03:01",
+	"createTime":"2022-11-23 13:36:16",
 	"createUser":0,
-	"updateTime":"2022-11-22 11:03:01",
+	"updateTime":"2022-11-23 13:36:16",
 	"updateUser":0,
-	"nickName":"",
-	"busDefine":"",
-	"isOnline":false
+	"infoDesc":""
 }';
 
 $arr = json_decode($s,true);

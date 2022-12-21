@@ -1,15 +1,12 @@
 <?php
 require("includes/init.php");
 
-$s = 'cn_table_name,
- en_table_name,
- source_table_name,
- source_table_id,
- source_col_name,
- source_col_id,
- mapping_num,
- create_user,
- create_time';
+$s = 'd.id,
+        enum_table_id,
+        enum_text,
+        enum_value,
+        enum_desc,
+        is_eff';
 $arr = explode(",", $s);
 var_dump($arr);
 foreach ($arr as $value) {
