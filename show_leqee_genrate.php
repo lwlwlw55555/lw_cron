@@ -34,11 +34,12 @@ $target_db = ClsPdo::getInstance($target_db_conf);
 
 $sql = "select distinct table_name
 from information_schema.COLUMNS
-where  TABLE_NAME like '%lee%' and TABLE_SCHEMA = 'bi'";
+where  TABLE_NAME like '%data_wb_task_model_field%' and TABLE_SCHEMA = 'bi'";
 
 $tables = $target_db->getCol($sql);
 // $tables = $target_db->getAll("show tables");
-var_export($tables);
+// var_export($tables);
+echo PHP_EOL;
 foreach ($tables as $table) {
     echo '<table
                 tableName="'.$table.'" domainObjectName="'.camelize($table).'"

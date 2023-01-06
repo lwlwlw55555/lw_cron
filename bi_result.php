@@ -104,6 +104,18 @@ foreach ($arr as $key => $value) {
 }
 
 function getCommentByColumn($column,$value){
+	if ('pageSize' == $column) {
+		return '每页条数';
+	}
+	if ('pageNum' == $column) {
+		return '当前页数';
+	}
+	if ('searchInfo' == $column) {
+		return '查询内容';
+	}
+	if ('createTime' == $column) {
+		return '创建时间';
+	}
 	$column = uncamelize($column);
 	$sql = "select COLUMN_COMMENT from information_schema.COLUMNS where COLUMN_NAME = '{$column}' and COLUMN_COMMENT <> ''";
 	global $bi_db;

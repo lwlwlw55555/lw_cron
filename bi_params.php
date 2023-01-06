@@ -28,12 +28,14 @@ global $bi_db;
 
 $s = '
 {
-	"wordRootId":0,
-	"wordId":0,
-	"cnName":"",
-	"order":0
-}
-        
+            "id":71,
+            "enumTableId":54,
+            "enumText":"three",
+            "enumValue":"3",
+            "enumDesc":null,
+            "isEff":true,
+            "enumTableName":"搜索页面"
+        }
 ';
 
 // | 参数名 | 类型   | 说明                                                         |
@@ -74,6 +76,12 @@ function getCommentByColumn($column,$value){
 }
 
 function getMustByColumn($column,$value){
+	if ('pageSize' == $column) {
+		return '是';
+	}
+	if ('pageNum' == $column) {
+		return '是';
+	}
 	$column = uncamelize($column);
 	$sql = "select IS_NULLABLE from information_schema.COLUMNS where COLUMN_NAME = '{$column}'";
 	global $bi_db;

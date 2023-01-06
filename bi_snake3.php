@@ -3,14 +3,16 @@ require("includes/init.php");
 
 $s = '
 
-		{
-			"id":0,
-			"infoId":0,
-			"fixedValue":"",
-			"enumType":"",
-			"enumValue":"",
-			"orderIndex":0
-		}
+	{
+	"id":0,
+	"taskEtlId":0,
+	"taskCrawlerId":0,
+	"index":0,
+	"dataType":"",
+	"dataId":0,
+	"primaryKey":false,
+	"example":""
+}
 	
 ';
 

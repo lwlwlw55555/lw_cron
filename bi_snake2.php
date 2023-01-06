@@ -1,24 +1,27 @@
 <?php
 require("includes/init.php");
 
+
 $s = '{
-	"createUserName":"",
 	"id":0,
-	"cnName":"",
-	"enName":"",
-	"simpleEnName":"",
-	"createTime":"2022-11-23 13:36:16",
-	"createUser":0,
-	"updateTime":"2022-11-23 13:36:16",
-	"updateUser":0,
-	"infoDesc":""
+	"taskEtlId":0,
+	"taskCrawlerId":0,
+	"index":0,
+	"dataType":"",
+	"dataId":0,
+	"primaryKey":false,
+	"example":""
 }';
 
 $arr = json_decode($s,true);
 // var_dump($arr);
 foreach ($arr as $key => $value) {
 	// camelize($value);
-	echo uncamelize($key).' as '.$key.','.PHP_EOL;
+	if (isset($argv[1])) {
+		echo $argv[1].'.'.uncamelize($key).' as '.$argv[1].'_'.uncamelize($key).','.PHP_EOL;
+	}else{
+		echo uncamelize($key).' as '.$key.','.PHP_EOL;
+	}
 }
 
 /**
@@ -29,6 +32,8 @@ foreach ($arr as $key => $value) {
 */
 function camelize($str)
 {
+
+
     $array = explode('_', $str);
     $result = $array[0];
     $len=count($array);
