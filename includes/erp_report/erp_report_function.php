@@ -102,7 +102,7 @@ function getNormalAttachmentOut($data,$file_name){
         $i++;
     }
        //设定写入excel的类型
-    header('Content-type:application/vnd.ms-excel;charset=utf-8;name="'.iconv('utf-8', 'gbk', $file_name).'.xlsx"');
+    // header('Content-type:application/vnd.ms-excel;charset=utf-8;name="'.iconv('utf-8', 'gbk', $file_name).'.xlsx"');
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     header('Content-Disposition: attachment;filename='.$file_name.'.xlsx');
     header('filename: '.$file_name.'.xlsx');
