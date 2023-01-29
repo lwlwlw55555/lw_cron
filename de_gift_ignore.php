@@ -1,5 +1,6 @@
 <?php
 require("includes/init.php");
+require(ROOT_PATH . "includes/erp_report/erp_report_function.php");
 $redis = getDeRedis();
 
 if (isset($_REQUEST['outerIdList']) && !empty($_REQUEST['outerIdList'])) {
