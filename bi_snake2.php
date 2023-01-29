@@ -3,14 +3,12 @@ require("includes/init.php");
 
 
 $s = '{
-	"id":0,
-	"taskEtlId":0,
-	"taskCrawlerId":0,
-	"index":0,
-	"dataType":"",
-	"dataId":0,
-	"primaryKey":false,
-	"example":""
+
+  "dataType":"",
+  "dataLength":"",
+  "hasNull":"",
+  "defaultValue":""
+ 
 }';
 
 $arr = json_decode($s,true);

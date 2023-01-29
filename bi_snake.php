@@ -1,17 +1,18 @@
 <?php
 require("includes/init.php");
 
-$s = 'd.id,
-        enum_table_id,
-        enum_text,
-        enum_value,
-        enum_desc,
-        is_eff';
+$s = '           data_type,
+           data_length,
+           has_null,
+           default_value,
+           data_precision_int,
+           data_precision_dec';
 $arr = explode(",", $s);
-var_dump($arr);
+// var_dump($arr);
+$pre = isset($argv[1])?$argv[1].'.':'';
 foreach ($arr as $value) {
 	// camelize($value);
-	echo $value.' as '.camelize($value).',';
+	echo $pre.trim($value).' as '.camelize($value).','.PHP_EOL;
 }
 
 /**
