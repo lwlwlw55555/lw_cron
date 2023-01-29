@@ -97,9 +97,12 @@ function getNormalAttachmentOut($data,$file_name){
         $objSheet = $objPHPExcel->getActiveSheet();  
         $objSheet->setTitle(!empty($key)?$key:"sheet".($i+1));     //对当前sheet对象命名
         $keys = getKeyCol($value[0]);
-        $printData = $value;
+
         if (!empty($key)) {
             $printData = array_merge([$keys],$value);
+        }else{
+            $printData = parseColByArr($value);
+            // var_dump($printData);die;
         }
         $objSheet->fromArray($printData);
         $i++;
@@ -124,6 +127,17 @@ function getKeyCol($arr){
         $keys = array_keys($arr);
         foreach ($keys as $value) {
             $res[$value] = $value;
+        }
+        return $res;
+    }
+    return [];
+}
+
+function parseColByArr($arr){
+    $res = [];
+    if (is_array($arr) && !empty($arr)) {
+        foreach ($arr as $value) {
+            $res[] = [$value];
         }
         return $res;
     }

@@ -3,7 +3,7 @@ require("includes/init.php");
 require(ROOT_PATH . "includes/erp_report/erp_report_function.php");
 $redis = getDeRedis();
 
-$_REQUEST['is_export'] = true;
+// $_REQUEST['is_export'] = true;
 if (isset($_REQUEST['outerIdList']) && !empty($_REQUEST['outerIdList'])) {
     // var_dump($_REQUEST['outerIdList']);
 	$redis->set('outerIdList',json_encode($_REQUEST['outerIdList']));
@@ -11,7 +11,7 @@ if (isset($_REQUEST['outerIdList']) && !empty($_REQUEST['outerIdList'])) {
 	return;
 }if (isset($_REQUEST['is_export']) && $_REQUEST['is_export']) {
     $outerIdListStr = $redis->get('outerIdList');
-    $res = getNormalAttachmentOut([['sku编码'=>json_decode($outerIdListStr,true)]],'DE电商-赠品忽略编码');
+    $res = getNormalAttachmentOut([array_merge(['sku编码'],json_decode($outerIdListStr,true))],'DE电商-赠品忽略编码');
 }else{
 	$outerIdListStr = $redis->get('outerIdList');
 	echo json_encode(['code'=>0,'data'=>['outerIdList'=>json_decode($outerIdListStr,true)]]);
