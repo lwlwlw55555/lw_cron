@@ -95,9 +95,12 @@ function getNormalAttachmentOut($data,$file_name){
         }
         $objPHPExcel->setactivesheetindex($i);
         $objSheet = $objPHPExcel->getActiveSheet();  
-        $objSheet->setTitle($key);     //对当前sheet对象命名
+        $objSheet->setTitle(!empty($key)?$key:"sheet".($i+1));     //对当前sheet对象命名
         $keys = getKeyCol($value[0]);
-        $printData = array_merge([$keys],$value);
+        $printData = $value;
+        if (!empty($key)) {
+            $printData = array_merge([$keys],$value);
+        }
         $objSheet->fromArray($printData);
         $i++;
     }
