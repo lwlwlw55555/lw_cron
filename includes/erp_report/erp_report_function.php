@@ -86,6 +86,7 @@ function getXxlAttachmentOut($data){
 
 
 function getNormalAttachmentOut($data,$file_name){
+    $file_name=iconv('utf-8','gb2312',$file_name);
     $objPHPExcel = new PHPExcel();
     $i=0;
     foreach ($data as $key => $value) {
