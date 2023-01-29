@@ -86,7 +86,7 @@ function getXxlAttachmentOut($data){
 
 
 function getNormalAttachmentOut($data,$file_name){
-    $file_name=iconv('utf-8','gb2312',$file_name);
+    // $file_name=iconv('utf-8','gb2312',$file_name);
     $objPHPExcel = new PHPExcel();
     $i=0;
     foreach ($data as $key => $value) {
@@ -113,14 +113,17 @@ function getNormalAttachmentOut($data,$file_name){
        //设定写入excel的类型
     // header('Content-type:application/vnd.ms-excel;charset=utf-8;name="'.iconv('utf-8', 'gbk', $file_name).'.xlsx"');
     // header("Content-Type: application/vnd.ms-excel; charset=UTF-8")
-    $encoded_filename = urlencode($file_name);// 将文件名进行urlencode转码
-    $encoded_filename = str_replace('+', '%20', $encoded_filename);
-    header("Content-type: application/vnd.ms-excel");
-    // header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; charset=UTF-8');
-    header('Content-Disposition: attachment;filename='.$encoded_filename.'.xlsx; filename*=UTF-8\'\''.$encoded_filename.'.xlsx');
-    // header('filename: '.$encoded_filename.'.xlsx');
-    // header('Cache-Control: max-age=0');
-    // header('Access-Control-Expose-Headers: filename,Content-Disposition');
+    // $encoded_filename = urlencode($file_name);// 将文件名进行urlencode转码
+    // $encoded_filename = str_replace('+', '%20', $encoded_filename);
+    // header("Content-type: application/vnd.ms-excel");
+    header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8');
+    header('Content-Disposition: attachment;filename='.urlencode($file_name).'.xlsx');
+    header('filename*: UTF-8\'\''.urlencode($file_name).'.xlsx');
+    header('filename: '.urlencode($file_name).'_'.date('YmdHis').'.xlsx');
+    header('charset: UTF-8');
+    header('Cache-Control: max-age=0');
+    //允许服务器指示那些响应标头可以暴露给浏览器中运行的脚本，以响应跨源请求。
+    header('Access-Control-Expose-Headers: filename,charset,Content-Disposition');
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel2007');
     $objWriter->save('php://output');
     exit();
