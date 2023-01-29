@@ -9,7 +9,8 @@ if (isset($_REQUEST['outerIdList']) && !empty($_REQUEST['outerIdList'])) {
 	echo json_encode(['code'=>0,'data'=>'']);
 	return;
 }if (isset($_REQUEST['is_export']) && $_REQUEST['is_export']) {
-    $res = getNormalAttachmentOut($result,'DE电商-赠品忽略编码');
+    $outerIdListStr = $redis->get('outerIdList');
+    $res = getNormalAttachmentOut(json_decode($outerIdListStr,true),'DE电商-赠品忽略编码');
 }else{
 	$outerIdListStr = $redis->get('outerIdList');
 	echo json_encode(['code'=>0,'data'=>['outerIdList'=>json_decode($outerIdListStr,true)]]);
