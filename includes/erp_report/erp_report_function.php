@@ -119,7 +119,7 @@ function getNormalAttachmentOut($data,$file_name){
     header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8');
     header('Content-Disposition: attachment;filename='.urlencode($file_name).'.xlsx');
     header('filename*: UTF-8\'\''.urlencode($file_name).'.xlsx');
-    header('filename: '.urlencode($file_name).'_'.date('YmdHis').'.xlsx');
+    header('filename: '.urlencode($file_name).'_'.date('ymdH').'.xlsx');
     header('charset: UTF-8');
     header('Cache-Control: max-age=0');
     //允许服务器指示那些响应标头可以暴露给浏览器中运行的脚本，以响应跨源请求。
