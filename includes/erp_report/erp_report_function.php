@@ -117,10 +117,10 @@ function getNormalAttachmentOut($data,$file_name){
     $encoded_filename = str_replace('+', '%20', $encoded_filename);
     header("Content-type: application/vnd.ms-excel");
     // header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; charset=UTF-8');
-    header('Content-Disposition: attachment;filename='.$encoded_filename.'.xlsx');
-    header('filename: '.$encoded_filename.'.xlsx');
-    header('Cache-Control: max-age=0');
-    header('Access-Control-Expose-Headers: filename,Content-Disposition');
+    header('Content-Disposition: attachment;filename='.$encoded_filename.'.xlsx; filename*=UTF-8\'\''.$encoded_filename.'.xlsx');
+    // header('filename: '.$encoded_filename.'.xlsx');
+    // header('Cache-Control: max-age=0');
+    // header('Access-Control-Expose-Headers: filename,Content-Disposition');
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel,'Excel2007');
     $objWriter->save('php://output');
     exit();
