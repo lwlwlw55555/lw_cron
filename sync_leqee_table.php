@@ -6,11 +6,11 @@ $lw_conf = array(
      "host" => "127.0.0.1:3306",
     // "host" => "121.40.113.153:3306",
     "user" => "root",
-    // "pass" => "123456",
+    "pass" => "aBc@123456",
     "charset" => "utf8",
     "pconnect" => "1",
     // "name" => "bi"
-    "name" => "bi"
+    "name" => "dp_out"
 );
 $to_conf = $lw_conf;
 global $to_conf;
@@ -30,7 +30,7 @@ $oms_db_conf = array(
     "pass" => "5*8Vnm&uTEF4",
     "charset" => "utf8",
     "pconnect" => "1",
-    "name" => "bi"
+    "name" => "dp_out"
 );
 
 $from_conf = $oms_db_conf;
@@ -42,7 +42,7 @@ moveDataByPartyId($oms_db,$lw_db);
 function moveDataByPartyId($oms_db,$lw_db){
 
     
-    $sql = "select distinct TABLE_NAME from information_schema.COLUMNS  where TABLE_SCHEMA = 'bi'";
+    $sql = "select distinct TABLE_NAME from information_schema.COLUMNS  where TABLE_SCHEMA = 'dp_out'";
     $tables = $oms_db->getCol($sql);
     var_dump($tables);
 
@@ -66,7 +66,7 @@ function moveData($from_db,$to_db,$table){
     global $from_conf,$to_conf;
     $primay_key = null;
     if(empty($columns)){
-        $columns_infos = execRetry($from_db, $from_conf, "show COLUMNS from bi.{$table}", 'getAll');
+        $columns_infos = execRetry($from_db, $from_conf, "show COLUMNS from dp_out.{$table}", 'getAll');
         foreach ($columns_infos as $columns_info) {
             $column = $columns_info['Field'];
             $columns[] = $column;
@@ -74,6 +74,9 @@ function moveData($from_db,$to_db,$table){
                 $primay_key = $column;
             }
         }
+    }
+    if (empty($columns)) {
+        return;
     }
     $sql_columns = implode('`,`',$columns);
     $start = 0;

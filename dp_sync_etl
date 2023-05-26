@@ -1,0 +1,282 @@
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 110000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 95000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 85000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 75000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 65000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 60000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 50000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 40000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 30000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 20000,5000
+
+Warning: PHP Startup: Unable to load dynamic library 'openssl' (tried: /opt/homebrew/lib/php/pecl/20200930/openssl (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl' (no such file)), /opt/homebrew/lib/php/pecl/20200930/openssl.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/openssl.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/openssl.so' (no such file))) in Unknown on line 0
+
+Warning: PHP Startup: Unable to load dynamic library 'sockets' (tried: /opt/homebrew/lib/php/pecl/20200930/sockets (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets' (no such file)), /opt/homebrew/lib/php/pecl/20200930/sockets.so (dlopen(/opt/homebrew/lib/php/pecl/20200930/sockets.so, 0x0009): tried: '/opt/homebrew/lib/php/pecl/20200930/sockets.so' (no such file))) in Unknown on line 0
+
+Warning: Module "pcntl" is already loaded in Unknown on line 0
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 80000,5000
+select * from assets_table_column_relation_back limit 105000,5000
+select * from assets_table_column_relation_back limit 90000,5000
+select * from assets_table_column_relation_back limit 70000,5000
+select * from assets_table_column_relation_back limit 45000,5000
+select * from assets_table_column_relation_back limit 35000,5000
+select * from assets_table_column_relation_back limit 55000,5000
+select * from assets_table_column_relation_back limit 60000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 75000,5000
+select * from assets_table_column_relation_back limit 65000,5000
+select * from assets_table_column_relation_back limit 100000,5000
+select * from assets_table_column_relation_back limit 85000,5000
+select * from assets_table_column_relation_back limit 40000,5000
+select * from assets_table_column_relation_back limit 30000,5000
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 50000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit 55000,5000
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 70000,5000
+select * from assets_table_column_relation_back limit 60000,5000
+select * from assets_table_column_relation_back limit 80000,5000
+select * from assets_table_column_relation_back limit 95000,5000
+select * from assets_table_column_relation_back limit 35000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 45000,5000
+select * from assets_table_column_relation_back limit 50000,5000
+select * from assets_table_column_relation_back limit 65000,5000
+select * from assets_table_column_relation_back limit 55000,5000
+select * from assets_table_column_relation_back limit 75000,5000
+select * from assets_table_column_relation_back limit 90000,5000
+select * from assets_table_column_relation_back limit 30000,5000
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit 40000,5000
+select * from assets_table_column_relation_back limit 45000,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 60000,5000
+select * from assets_table_column_relation_back limit 50000,5000
+select * from assets_table_column_relation_back limit 70000,5000
+select * from assets_table_column_relation_back limit 85000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 35000,5000
+select * from assets_table_column_relation_back limit 40000,5000
+select * from assets_table_column_relation_back limit 55000,5000
+select * from assets_table_column_relation_back limit 45000,5000
+select * from assets_table_column_relation_back limit 65000,5000
+select * from assets_table_column_relation_back limit 80000,5000
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit 30000,5000
+select * from assets_table_column_relation_back limit 35000,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 50000,5000
+select * from assets_table_column_relation_back limit 40000,5000
+select * from assets_table_column_relation_back limit 60000,5000
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 75000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 30000,5000
+select * from assets_table_column_relation_back limit 45000,5000
+select * from assets_table_column_relation_back limit 35000,5000
+select * from assets_table_column_relation_back limit 55000,5000
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 70000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 40000,5000
+select * from assets_table_column_relation_back limit 30000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 50000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 65000,5000
+select * from assets_table_column_relation_back limit 35000,5000
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 45000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit 60000,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 30000,5000
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 40000,5000
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 55000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 35000,5000
+select * from assets_table_column_relation_back limit 50000,5000
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 30000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit 45000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 40000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 35000,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 15000,5000
+select * from assets_table_column_relation_back limit 30000,5000
+select * from assets_table_column_relation_back limit 0,5000
+select * from assets_table_column_relation_back limit -5000,5000
+
+Fatal error: Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5000,5000' at line 1 in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php:400
+Stack trace:
+#0 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(400): PDO->query('select * from a...')
+#1 /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php(60): ClsPdo->select('select * from a...', false)
+#2 /Users/lw/Code/lwGitHub/lw_cron/dp_sync_etl.php(40): ClsPdo->getAll('select * from a...')
+#3 {main}
+  thrown in /Users/lw/Code/lwGitHub/lw_cron/includes/ClsPdo.php on line 400
+select * from assets_table_column_relation_back limit 10000,5000
+select * from assets_table_column_relation_back limit 25000,5000
+select * from assets_table_column_relation_back limit 5000,5000
+select * from assets_table_column_relation_back limit 20000,5000
+select * from assets_table_column_relation_back limit 0,5000

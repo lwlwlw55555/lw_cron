@@ -1,18 +1,28 @@
 <?php
 require("includes/init.php");
 
-$s = 'r.id, r.collection_id, r.collection_type, r.sync_time, r.is_complete, r.create_time';
+$s = '  t.id,
+    t.task_info_id,
+    t.table_id,
+    t.is_all_column,
+    e.id,
+    e.task_info_id,
+    e.type,
+    e.data_id,
+    e.collection_type,
+    e.create_time,
+    e.update_time';
 $arr = explode(",", $s);
 // var_dump($arr);
 $pre = isset($argv[1])?$argv[1].'.':'';
 foreach ($arr as $value) {
-	// camelize($value);
-  if (strpos($value, '_')) {
-    echo trim($pre.trim($value).' as '.camelize($value)).','.PHP_EOL;
+  if (strpos(trim($value), 'sai') === 0){
+
+    echo trim($pre.trim($value).',').PHP_EOL;
   }else{
-    echo $pre.trim($value).','.PHP_EOL;
+  	// camelize($value);
+  	echo trim($pre.trim($value).' as '.removePoint($value).',').PHP_EOL;
   }
-	
 }
 
 /**
@@ -23,11 +33,6 @@ foreach ($arr as $value) {
 */
 function camelize($str)
 {
-    $arr = explode('.', $str);
-    if(!empty($arr) && count($arr) == 2){
-      $str = $arr[1];
-    }
-
     $array = explode('_', $str);
     $result = $array[0];
     $len=count($array);
@@ -52,7 +57,15 @@ function uncamelize($camelCaps,$separator='_')
 }
 
 function removePoint($str){
-  if (strpos($str, '.')) {
-      return substr($str, strpos($str, '.'));
-  }
+  return trim(str_replace('`','',str_replace('.', '_',$str)));
 }
+
+function checkPre($str,$pre){
+  // echo strpos($str, $pre) === 0;die;
+  if (strpos($str, $pre) === 0) {
+    return true;
+  }
+  return false;
+}
+
+function startWith($str, $needle) { return strpos($str, $needle) === 0;}

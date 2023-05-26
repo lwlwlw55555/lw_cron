@@ -3,12 +3,14 @@ require("includes/init.php");
 
 
 $s = '{
-
-  "dataType":"",
-  "dataLength":"",
-  "hasNull":"",
-  "defaultValue":""
- 
+  "id":0,
+  "tTable":"",
+  "tColumn":"",
+  "sTable":"",
+  "sColumn":"",
+  "fileName":"",
+  "createTime":"2023-03-22 15:31:19",
+  "updateTime":"2023-03-22 15:31:19"
 }';
 
 $arr = json_decode($s,true);

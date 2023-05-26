@@ -13,7 +13,7 @@ $lw_conf = array(
     "host" => "127.0.0.1:3306",
     // "host" => "121.40.113.153:3306",
     "user" => "root",
-    // "pass" => "123456",
+    "pass" => "aBc@123456",
     "charset" => "utf8",
     "pconnect" => "1",
     // "name" => "sys_info"
@@ -22,7 +22,8 @@ $lw_conf = array(
 $lw_db = ClsPdo::getInstance($lw_conf);
 
 $target_db_conf = array(
-    "host" => "rm-bp1kxg882g197xnnvxo.mysql.rds.aliyuncs.com:3306",
+    // "host" => "rm-bp1kxg882g197xnnvxo.mysql.rds.aliyuncs.com:3306",
+    "host" => "47.98.144.22:20001",
     "user" => "bi",
     "pass" => "5*8Vnm&uTEF4",
     "charset" => "utf8",
@@ -34,7 +35,7 @@ $target_db = ClsPdo::getInstance($target_db_conf);
 
 $sql = "select distinct table_name
 from information_schema.COLUMNS
-where  TABLE_NAME like '%data_wb_task_model_field%' and TABLE_SCHEMA = 'bi'";
+where  TABLE_NAME like '%crawler_monitor%' and TABLE_SCHEMA = 'bi'";
 
 $tables = $target_db->getCol($sql);
 // $tables = $target_db->getAll("show tables");

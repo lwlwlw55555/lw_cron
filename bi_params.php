@@ -3,6 +3,7 @@ require("includes/init.php");
 
 $bi_db_conf = array(
     "host" => "rm-bp1kxg882g197xnnvxo.mysql.rds.aliyuncs.com:3306",
+    // "host" => "47.98.144.22:20001",
     "user" => "bi",
     "pass" => "5*8Vnm&uTEF4",
     "charset" => "utf8",
@@ -12,30 +13,24 @@ $bi_db_conf = array(
 $bi_db = ClsPdo::getInstance($bi_db_conf);
 global $bi_db;
 
-// $s = '{
-// 	"taskId":0,
-// 	"pathId":0,
-// 	"taskCode":0,
-// 	"taskDev":0,
-// 	"taskDevName":"",
-// 	"businessDomain":"",
-// 	"theme":"",
-// 	"timePeriodTrans":"",
-// 	"businessDimension":"",
-// 	"collateLogic":"",
-// 	"taskInfoType":"CRAWLER | ETL | DIMENSION | COLLECTION | SYNC | ACCESS | ETL_SUPPLEMENT | CRAWLER_SUPPLEMENT"
-// }';
-
 $s = '
 {
-            "id":71,
-            "enumTableId":54,
-            "enumText":"three",
-            "enumValue":"3",
-            "enumDesc":null,
-            "isEff":true,
-            "enumTableName":"搜索页面"
-        }
+	"id":0,
+	"taskId":0,
+	"shovelRecordId":0,
+	"timeRange":"",
+	"taskStatus":"",
+	"startTime":"2023-05-10 10:56:17",
+	"finishTime":"2023-05-10 10:56:17",
+	"targetMachine":"",
+	"targetDatabaseType":"",
+	"targetDatabaseCode":"",
+	"targetSchema":"",
+	"targetTable":"",
+	"mizarGroupId":0,
+	"createTime":"2023-05-10 10:56:17",
+	"updateTime":"2023-05-10 10:56:17"
+}
 ';
 
 // | 参数名 | 类型   | 说明                                                         |
@@ -67,6 +62,27 @@ function getCommentByColumn($column,$value){
 	}
 	if ('createTime' == $column) {
 		return '创建时间';
+	}
+	if ('name' == $column) {
+		return '名称';
+	}
+	if ('type' == $column) {
+		return '类型';
+	}
+	if ('desc' == $column) {
+		return '描述';
+	}
+	if ('owner' == $column) {
+		return '负责人';
+	}
+	if ('action' == $column) {
+		return '方式';
+	}
+	if ('value' == $column) {
+		return '内容';
+	}
+	if ('taskId' == $column) {
+		return '任务id';
 	}
 	$column = uncamelize($column);
 	$sql = "select COLUMN_COMMENT from information_schema.COLUMNS where COLUMN_NAME = '{$column}' and COLUMN_COMMENT <> ''";

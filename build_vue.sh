@@ -12,5 +12,7 @@ npm i
 npm install --save github-markdown-css
 npm install element-ui --save
 npm install axios --save
+npm install axios --save
+npm install vue-json-viewer --save
 
 /usr/bin/npm run build

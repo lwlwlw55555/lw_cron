@@ -12,68 +12,6 @@ $bi_db_conf = array(
 $bi_db = ClsPdo::getInstance($bi_db_conf);
 global $bi_db;
 
-// $s = '
-//             {
-//                 "columnComment": "1 acsacasca",
-//                 "isUnique": 1,
-//                 "dataType": "文本",
-//                 "dataLength": 1123
-//             }
-        
-//     ';
-
-// $s = '{
-// 	"businessBaseIdStr":"",
-// 	"createUserName":"",
-// 	"businessBaseNameStr":"",
-// 	"enumTableDetailList":[
-// 		{
-// 			"id":0,
-// 			"enumTableId":0,
-// 			"enumText":"",
-// 			"enumValue":"",
-// 			"enumDesc":"",
-// 			"isEff":false
-// 		}
-// 	],
-// 	"mappingNum":0,
-// 	"dataType":"",
-// 	"dataLength":"",
-// 	"dataPrecisionInt":"",
-// 	"dataPrecisionDec":"",
-// 	"hasNull":false,
-// 	"defaultValue":"",
-// 	"valueRange":"",
-// 	"enumTableIdList":[
-// 		0
-// 	],
-// 	"businessBaseIdList":[
-// 		0
-// 	],
-// 	"attrList":[
-// 		{
-// 			"id":0,
-// 			"dataUnitId":0,
-// 			"attrKey":"",
-// 			"attrValue":""
-
-// 		}
-// 	],
-// 	"id":0,
-// 	"cnName":"",
-// 	"enName":"",
-// 	"simpleEnName":"",
-// 	"updateTime":"2022-11-23 16:19:25",
-// 	"updateUser":0,
-// 	"nickName":"",
-// 	"busDefine":"",
-// 	"isOnline":false,
-// 	"onlineTime":"2022-11-23 16:19:25",
-// 	"onlineUser":0,
-// 	"isDelete":false
-// }';
-
-
 // | 参数名 | 类型   | 说明   |
 // | :----- | :----- | ------ |
 // | key    | String | 传参用 |
@@ -82,10 +20,13 @@ global $bi_db;
 
 
 $s = '
-		{
-            "key": "adb3",
-            "name": "ABD3"
-        }
+ 
+	{
+		"collectionType": "NATIVE",
+		"collectionId": 6302,
+		"isComplete": true,
+		"columnId": 76432700604383
+	}
 ';
 // | 参数名 | 类型   | 说明                                                         |
 // | :----- | :----- | ------------------------------------------------------------ |
@@ -115,6 +56,18 @@ function getCommentByColumn($column,$value){
 	}
 	if ('createTime' == $column) {
 		return '创建时间';
+	}
+	if ('owner' == $column) {
+		return '负责人';
+	}
+	if ('name' == $column) {
+		return '名称';
+	}
+	if ('type' == $column) {
+		return '类别';
+	}
+	if ('id' == $column) {
+		return '唯一标识';
 	}
 	$column = uncamelize($column);
 	$sql = "select COLUMN_COMMENT from information_schema.COLUMNS where COLUMN_NAME = '{$column}' and COLUMN_COMMENT <> ''";

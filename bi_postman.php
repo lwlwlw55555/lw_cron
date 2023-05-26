@@ -14,37 +14,39 @@ global $bi_db;
 
 $s = '
 {
-	"ruleList":[
-		{
-			"id":0,
-			"infoId":0,
-			"fixedValue":"",
-			"enumType":"",
-			"enumValue":"",
-			"orderIndex":0
-		}
+	"collectionMapIdList":[
+		0
 	],
 	"id":0,
-	"cnName":"",
-	"simpleEnName":"",
-	"storeLocal":"",
-	"createTime":"2022-12-01 14:58:37",
+	"name":"",
+	"dingTalkId":0,
+	"taskId":0,
+	"isEnable":false,
+	"beginDate":"2023-05-06 15:58:16",
+	"endDate":"2023-05-06 15:58:16",
+	"createTime":"2023-05-06 15:58:16",
+	"updateTime":"2023-05-06 15:58:16",
 	"createUser":0,
-	"updateTime":"2022-12-01 14:58:37",
 	"updateUser":0,
-	"infoDesc":""
+	"desc":""
 }
 ';
 
 $json = json_decode($s,true);
 
-$url = "/model/design/DesignEtlSeparate/save";
+$url = "/assets/ColumnRelation/byKey";
 
 $res = "curl --location --request POST 'http://localhost:8086/controller{$url}' \\".PHP_EOL;
 
 $res = parseJson($json,$res);
 
 echo $res;
+
+echo PHP_EOL.PHP_EOL.PHP_EOL;
+
+$res2 = parseJson2($json,$res2);
+
+echo $res2;
 
 function parseJson($arr,$res){
 	foreach ($arr as $key => $value) {
@@ -58,12 +60,35 @@ function parseJson($arr,$res){
 
 }
 
+function parseJson2($arr,$res){
+	foreach ($arr as $key => $value) {
+		if (is_array($value)) {
+			$res = parseArr2($value,$res,$key);
+		}else{
+			$res .= "{$key}:{$value}".PHP_EOL;
+		}
+	}
+	return $res;
+
+}
+
 function parseArr($arr,$res,$prefix){
 	foreach ($arr as $key => $value) {
 		if (is_array($value)) {
 			$res = parseArr($value,$res,$prefix.getArrName($key));
 		}else{
 			$res .= "--form '{$prefix}".getArrName($key)."={$value}' \\".PHP_EOL;
+		}
+	}
+	return $res;
+}
+
+function parseArr2($arr,$res,$prefix){
+	foreach ($arr as $key => $value) {
+		if (is_array($value)) {
+			$res = parseArr($value,$res,$prefix.getArrName($key));
+		}else{
+			$res .= "{$prefix}".getArrName($key).":{$value}".PHP_EOL;
 		}
 	}
 	return $res;

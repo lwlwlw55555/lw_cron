@@ -1,0 +1,173 @@
+**返回示例**
+
+```json
+{
+    "code": 200,
+    "success": true,
+    "message": null,
+    "errors": null,
+    "obj": null
+}
+```
+
+**返回参数说明**
+
+无
+
+
+
+
+[allMd]
+
+## api测试
+
+**请求URL：**
+
+- `controller/server/api/testApi`
+
+**请求方式：**
+
+- POST
+
+**参数：** 
+
+| 参数名       | 类型    | 说明                                  |
+| :----------- | :------ | ------------------------------------- |
+| id           | Integer | 唯一标识                              |
+| apiDetailId  | Integer | api_detail_id                         |
+| name         | String  | 名称                                  |
+| type         | String  | new_table 新增，miss_info业务信息缺失 |
+| isMust       | Boolean | 是否必填                              |
+| example      | String  | 字段示例                              |
+| defaultValue | String  | 默认值                                |
+| desc         | String  | 描述，最多100字符                     |
+
+**返回示例**
+
+```json
+{
+    "code": 200,
+    "success": true,
+    "message": null,
+    "errors": null,
+    "obj": [
+        {
+            "name": "api事件",
+            "obj": [
+                {
+                    "key": "CREATE",
+                    "name": "创建API",
+                    "id": null
+                },
+                {
+                    "key": "EDIT_SOURCE_CODE",
+                    "name": "编写数据源/代码",
+                    "id": null
+                },
+                {
+                    "key": "EDIT_PARAM_RESULT",
+                    "name": "编写请求/返回参数",
+                    "id": null
+                },
+                {
+                    "key": "DELETE",
+                    "name": "删除",
+                    "id": null
+                },
+                {
+                    "key": "ENABLE",
+                    "name": "启用/禁用",
+                    "id": null
+                },
+                {
+                    "key": "PUBLISH",
+                    "name": "上线/下线",
+                    "id": null
+                }
+            ],
+            "field": "action"
+        },
+        {
+            "name": "参数类型",
+            "obj": [
+                {
+                    "key": "TEXT",
+                    "name": "文本",
+                    "id": null
+                },
+                {
+                    "key": "ARRAY",
+                    "name": "数组",
+                    "id": null
+                },
+                {
+                    "key": "NUMBER",
+                    "name": "数值",
+                    "id": null
+                }
+            ],
+            "field": "type"
+        },
+        {
+            "name": "返回类型",
+            "obj": [
+                {
+                    "key": "string",
+                    "name": "文本",
+                    "id": null
+                },
+                {
+                    "key": "number",
+                    "name": "数值",
+                    "id": null
+                }
+            ],
+            "field": "type"
+        },
+        {
+            "name": "数据源/数据库",
+            "obj": [
+                {
+                    "key": null,
+                    "name": "MYSQL",
+                    "id": "1",
+                    "children": [
+                        {
+                            "key": null,
+                            "name": "hermon_tiberias",
+                            "id": "1"
+                        },
+                        {
+                            "key": null,
+                            "name": "bi_origin",
+                            "id": "2"
+                        }
+                    ]
+                },
+                {
+                    "key": null,
+                    "name": "AnalyticDB for MySQL 3.0",
+                    "id": "2",
+                    "children": [
+                        {
+                            "key": null,
+                            "name": "tiberias",
+                            "id": "3"
+                        }
+                    ]
+                }
+            ],
+            "field": "schemaId"
+        }
+    ]
+}
+```
+
+**返回参数说明**
+
+| 参数名 | 类型   | 说明                                                         |
+| :----- | :----- | ------------------------------------------------------------ |
+| key    | String | key和id必有且只有一个，用于后续接口传参（有id传id，有key传key) |
+| id     | String | key和id必有且只有一个，用于后续接口传参（有id传id，有key传key) |
+| name   | String | 必有，列表展示的值                                           |
+
