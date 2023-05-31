@@ -14,5 +14,6 @@ npm install element-ui --save
 npm install axios --save
 npm install axios --save
 npm install vue-json-viewer --save
+npm install bin-code-editor -d
 
 /usr/bin/npm run build
