@@ -1,6 +1,27 @@
 <?php
 require("includes/init.php");
 
+/***
+** 废弃 靳飞当年教过你的 idea有个插件可以直接转 json到java pojo！！！！！！
+** 废弃 靳飞当年教过你的 idea有个插件可以直接转 json到java pojo！！！！！！
+** 废弃 靳飞当年教过你的 idea有个插件可以直接转 json到java pojo！！！！！！
+** 废弃 靳飞当年教过你的 idea有个插件可以直接转 json到java pojo！！！！！！
+** 废弃 靳飞当年教过你的 idea有个插件可以直接转 json到java pojo！！！！！！
+备忘录里搜！
+Idea插件 json转对象vo
+GsonFormat
+必须在一个vo下才能用！内部类也可！
+Idea插件 json转对象vo
+GsonFormat
+必须在一个vo下才能用！内部类也可！
+Idea插件 json转对象vo
+GsonFormat
+必须在一个vo下才能用！内部类也可！
+Idea插件 json转对象vo
+GsonFormat
+必须在一个vo下才能用！内部类也可！
+***/
+
 
 $s = '{
   "id":0,

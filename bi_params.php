@@ -2,8 +2,8 @@
 require("includes/init.php");
 
 $bi_db_conf = array(
-    "host" => "rm-bp1kxg882g197xnnvxo.mysql.rds.aliyuncs.com:3306",
-    // "host" => "47.98.144.22:20001",
+    // "host" => "rm-bp1kxg882g197xnnvxo.mysql.rds.aliyuncs.com:3306",
+    "host" => "47.98.144.22:20001",
     "user" => "bi",
     "pass" => "5*8Vnm&uTEF4",
     "charset" => "utf8",
@@ -15,21 +15,12 @@ global $bi_db;
 
 $s = '
 {
-	"id":0,
-	"taskId":0,
-	"shovelRecordId":0,
-	"timeRange":"",
-	"taskStatus":"",
-	"startTime":"2023-05-10 10:56:17",
-	"finishTime":"2023-05-10 10:56:17",
-	"targetMachine":"",
-	"targetDatabaseType":"",
-	"targetDatabaseCode":"",
-	"targetSchema":"",
-	"targetTable":"",
-	"mizarGroupId":0,
-	"createTime":"2023-05-10 10:56:17",
-	"updateTime":"2023-05-10 10:56:17"
+	
+	"expectTimeType":0,
+	"expectTimeSegment":0,
+	"expectTimeHour":0,
+	"expectTimeMinute":0
+	
 }
 ';
 

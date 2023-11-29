@@ -35,7 +35,7 @@ $target_db = ClsPdo::getInstance($target_db_conf);
 
 $sql = "select distinct table_name
 from information_schema.COLUMNS
-where  TABLE_NAME like '%crawler_monitor%' and TABLE_SCHEMA = 'bi'";
+where  TABLE_NAME like '%process_monitor%' and TABLE_SCHEMA = 'bi'";
 
 $tables = $target_db->getCol($sql);
 // $tables = $target_db->getAll("show tables");

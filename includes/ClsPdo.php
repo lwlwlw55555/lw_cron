@@ -280,6 +280,7 @@ class ClsPdo
      */
     private function outputError($strErrMsg)
     {
+        var_dump($this->config);
         throw new Exception('MySQL Error: '.$strErrMsg);
     }
     

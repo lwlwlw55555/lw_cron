@@ -34,22 +34,24 @@ require("includes/init.php");
 
 $s = '
 
- {
-            "id":0,
-            "taskInfoId":0,
-            "type":"",
-            "dataId":0,
-            "collectionType":"",
-            "createTime":"2023-05-06 13:55:49",
-            "updateTime":"2023-05-06 13:55:49"
+        {
+            "collectionName":"",
+            "collectionLevel":0,
+            "collectionId":0,
+            "status":"",
+            "id":0
         }
 ';
 
 $arr = json_decode($s,true);
 // var_dump($arr);
 foreach ($arr as $key => $value) {
-	// camelize($value);
-	echo uncamelize($key).','.PHP_EOL;
+    // camelize($value);
+    if (isset($argv[1])) {
+        echo $argv[1].'.'.uncamelize($key).' as '.$argv[1].'_'.uncamelize($key).','.PHP_EOL;
+    }else{
+        echo uncamelize($key).' as '.$key.','.PHP_EOL;
+    }
 }
 
 echo PHP_EOL.PHP_EOL.PHP_EOL;

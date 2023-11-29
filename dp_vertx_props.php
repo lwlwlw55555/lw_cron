@@ -13,41 +13,26 @@ $bi_db_conf = array(
 $bi_db = ClsPdo::getInstance($bi_db_conf);
 global $bi_db;
 
-// | 参数名 | 类型   | 说明   |
-// | :----- | :----- | ------ |
-// | key    | String | 传参用 |
-// | name   | String | 展示用 |
 
-
+$pre = "oss-report";
 
 $s = '
 {
-                "basicName": "芭妮兰官方旗舰店:大祥\r",
-                "priorLevel": 99,
-                "priorLevelStr": "默认",
-                "basicId": "35199",
-                "expectTimeType": null,
-                "expectTimeSegment": null,
-                "expectTimeHour": null,
-                "expectTimeMinute": null,
-                "expectCompleteTimeStr": ""
-            }
+	"host":"",
+	"accessKey":"",
+	"secretKey":"",
+	"bucket":""
+}
      
 ';
-// | 参数名 | 类型   | 说明                                                         |
-// | :----- | :----- | ------------------------------------------------------------ |
-// | key    | String | key和id必有且只有一个，用户后续接口传参（有id传id，有key传key) |
-// | id     | String | key和id必有且只有一个，用户后续接口传参（有id传id，有key传key) |
-// | name   | String | 必有，列表展示的值                                           |
+
 
 $arr = json_decode($s,true);
-echo "| 参数名 | 类型   | 说明                                                         |   \n";
-echo "| :----- | :----- | ------------------------------------------------------------ |   \n";
 foreach ($arr as $key => $value) {
 	if ($key == 'infoId') {
 		continue;
 	}
-	echo "| {$key} | ".(is_numeric($value)?'Integer':(is_bool($value)?'Boolean':(is_array($value)?'Array':'String')))."   |  ".getCommentByColumn($key,$value)."                                                |   \n";
+	echo "this.{$key} = Keel.config(\"{$pre}.{$key}\");".PHP_EOL;
 }
 
 function getCommentByColumn($column,$value){

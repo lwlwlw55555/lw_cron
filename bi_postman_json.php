@@ -14,24 +14,18 @@ global $bi_db;
 
 $s = '
 {
-	"collectionMapIdList":[{
-			"id":0,
-		"name":"",
-	"dingTalkId":0
-}
+	"platformCodes":[
+		""
 	],
-	"id":0,
-	"name":"",
-	"dingTalkId":0,
-	"taskId":0,
-	"isEnable":false,
-	"beginDate":"2023-05-06 15:58:16",
-	"endDate":"2023-05-06 15:58:16",
-	"createTime":"2023-05-06 15:58:16",
-	"updateTime":"2023-05-06 15:58:16",
-	"createUser":0,
-	"updateUser":0,
-	"desc":""
+	"accountIds":[
+		0
+	],
+	"shopIds":[
+		0
+	],
+	"useType":[
+		0
+	]
 }
 ';
 
@@ -39,29 +33,32 @@ $json = json_decode($s,true);
 
 $url = "/AccountOpenApi/getLoginAcc";
 
-$res = "curl --location --request POST 'http://localhost:8086/controller{$url}' \\".PHP_EOL;
+$res = "curl --location --request POST 'http://localhost:8001/controller{$url}' \\".PHP_EOL;
 
-$res = parseJson($json,$res);
+// $res = parseJson($json,$res);
 
 echo $res;
 
-echo PHP_EOL.PHP_EOL.PHP_EOL;
+echo PHP_EOL;
+echo "--header 'Content-Type: application/json'";
+echo PHP_EOL;
+echo "--data '".$s."'";
 
-$res2 = parseJson2($json,$res2);
 
-echo $res2;
 
-function parseJson($arr,$res){
-	foreach ($arr as $key => $value) {
-		if (is_array($value)) {
-			$res = parseArr($value,$res,$key);
-		}else{
-			$res .= "--form '{$key}={$value}' \\".PHP_EOL;
-		}
-	}
-	return $res;
+echo PHP_EOL;
 
-}
+// function parseJson($arr,$res){
+// 	foreach ($arr as $key => $value) {
+// 		if (is_array($value)) {
+// 			$res = parseArr($value,$res,$key);
+// 		}else{
+// 			$res .= "--form '{$key}={$value}' \\".PHP_EOL;
+// 		}
+// 	}
+// 	return $res;
+
+// }
 
 function parseJson2($arr,$res){
 	foreach ($arr as $key => $value) {

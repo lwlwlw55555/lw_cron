@@ -39,7 +39,7 @@ $target_db = ClsPdo::getInstance($target_db_conf);
 
 $sql = "select distinct table_name
 from information_schema.COLUMNS
-where TABLE_NAME like '%full_monitor%' and TABLE_SCHEMA = 'bi'
+where TABLE_NAME like 'strategic_upload_%' and TABLE_SCHEMA = 'bi'
 order by length(table_name)";
 
 $tables = $target_db->getCol($sql);

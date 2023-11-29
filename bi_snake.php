@@ -1,7 +1,7 @@
 <?php
 require("includes/init.php");
 
-$s = 'r.id, r.collection_id, r.collection_type, r.sync_time, r.is_complete, r.create_time';
+$s = 't.id, t.schema_id, t.table_name, t.table_comment, t.last_table_ddl, t.current_table_ddl, t.create_time, t.update_time, t.data_length, t.table_rows, t.is_model_build, t.table_wh_type';
 $arr = explode(",", $s);
 // var_dump($arr);
 $pre = isset($argv[1])?$argv[1].'.':'';
