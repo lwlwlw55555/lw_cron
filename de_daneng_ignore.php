@@ -11,7 +11,7 @@ if (isset($_REQUEST['danengOuterIdList']) && !empty($_REQUEST['danengOuterIdList
     return;
 }if (isset($_REQUEST['is_export']) && $_REQUEST['is_export']) {
     $outerIdListStr = $redis->get('danengOuterIdList');
-    $res = getNormalAttachmentOut([array_merge(['sku编码'],json_decode($outerIdListStr,true))],'DE电商-赠品忽略编码');
+    $res = getNormalAttachmentOut([array_merge(['sku编码'],json_decode($outerIdListStr,true))],'DE电商-达能忽略编码');
 }else{
     $outerIdListStr = $redis->get('danengOuterIdList');
     echo json_encode(['code'=>0,'data'=>['danengOuterIdList'=>json_decode($outerIdListStr,true)]]);
